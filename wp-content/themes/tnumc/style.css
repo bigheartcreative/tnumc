@@ -924,3 +924,282 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+
+/**
+ 	=== HEADER STYLES ===
+**/
+
+/*TOPBAR STYLES*/
+.topbar {
+	background-color: rgb(46, 95, 151);
+  	height: 31px;
+}
+.topbar a {
+	color: rgb(0, 0, 0);
+  	font-size: 13px;
+  	font-family: "Open Sans";
+}
+.topbar a:hover {
+	text-decoration: underline;
+}
+
+
+/*SEARCH BAR STYLES*/
+.search {
+	background-color: rgb(238, 238, 238);
+	height: 75px;
+}
+.searchbox {
+  width: 882px;
+  height: 42px;
+  margin: 0 auto;
+}
+.search button {
+  width: 79px;
+  height: 36px;
+  /*box-shadow: */
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+
+/*BANNER STYLES*/
+/*TN_UMC Logo Styles - in case we don't use an image*/
+.banner h1 {
+  font-size: 30px;
+  font-family: "Helvetica LT Std";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+}
+.banner h2 {
+  font-size: 16px;
+  font-family: "Helvetica LT Std";
+  color: rgb(0, 0, 0);
+}
+.banner button {
+  border-radius: 4px;
+  background-color: rgb(84, 147, 208);
+  box-shadow: 0px 5px 5px 0px rgba(153, 153, 153, 0.004);
+  width: 136px;
+  height: 28px;
+  text-align: center;
+}
+.banner p {
+  font-size: 12px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/*NAV STYLES*/
+.nav {
+  background-color: rgb(84, 147, 208);
+  width: 100%;
+  height: 96px;
+}
+.nav ul {
+	margin: 0 auto;
+}
+.nav li a {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+}
+.nav li a:hover {
+	background-color: rgb(255, 255, 255);
+	color: rgb(46, 95, 151);
+	border-top: solid 3px rgb(233, 63, 51);
+}
+.dropdown {
+	background-color: rgb(255, 255, 255);
+	font-size: 14px;
+	font-family: "Open Sans";
+  	color: rgb(102, 102, 102);
+}
+.active {
+	background-color: rgb(255, 255, 255);
+	color: rgb(46, 95, 151);
+	border-top: solid 3px rgb(233, 63, 51);
+}
+
+
+/**
+ 	=== FOOTER STYLES ===
+**/
+
+.footer {
+  border-top: 1px solid rgb(249, 249, 249);  /* Or you could just add an <hr> before footer */
+}
+
+.footer h6 {
+	font-family: "Open Sans";
+	font-size: 22px;
+	font-weight: bold;
+	color: rgb(46, 95, 151);
+}
+
+.footer p {
+	font-family: Arial;
+	font-size: 14px;
+	color: rgb(0, 0, 0);
+}
+
+.footer a {
+	font-family: Arial;
+	font-size: 14px;
+	color: rgb(46, 95, 151);
+}
+
+
+/**
+ 	========== CUSTOM STYLES ==========
+**/
+
+/**
+ 	=== HOME PAGE STYLES ===
+**/
+
+
+/***SLIDER STYLES***/
+.slider h3 {
+  font-size: 48px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+}
+.slider p {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  line-height: 1.667;
+}
+.slider button {
+  width: 192px;
+  height: 50px;
+  background-color: rgb(83, 145, 205);
+  /*box-shadow: */
+}
+
+
+
+/***PROMO STYLES***/
+.promo {
+	background-color: rgb(238, 238, 238);
+	/*box-shadow: */
+}
+.promo h3 {
+  font-size: 38px;
+  font-family: "Open Sans";
+  color: rgb(46, 95, 151);
+  line-height: 1.2;
+  text-align: center;
+}
+.promo h4 {
+  font-size: 30px;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  text-align: center;
+}
+.promo p {
+  font-size: 16px;
+  font-family: "Arial";
+  color: rgb(119, 119, 119);
+  line-height: 1.875;
+  text-align: center;
+}
+.promo button {
+	width: 192px;
+  	height: 50px;
+  	background-color: rgb(83, 145, 205);
+  	/*box-shadow: */
+}
+
+
+/***NEWS & EVENTS STYLES***/
+.news h5 {
+	font-size: 18px;
+	font-family: "Open Sans";
+  	color: rgb(46, 95, 151);
+  	font-weight: bold;
+  	line-height: 1.2;	
+}
+.news p {
+	font-family: Arial;
+	font-size: 15px;
+	color: rgb(0, 0, 0);
+}
+
+
+/**
+ 	=== ARTICLE PAGE STYLES ===
+**/
+
+/*Put breadcrumb styles here*/
+
+.article h3 {
+	font-family: "Open Sans";
+	font-size: 20px;
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+}
+.author {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgb(0, 0, 0);
+}
+.article p {
+	font-family: Arial;
+	font-size: 14px;
+	color: rgb(0, 0, 0);
+}
+.caption {
+	font-family: Arial;
+	font-size: 12px;
+	color: rgb(0, 0, 0);
+}
+.quote {
+	font-family: Arial;
+	font-size: 26px;
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(0, 0, 0);
+}
+.reference {
+	font-family: Arial;
+	font-size: 15px;
+	color: rgb(102, 102, 102);
+}
+/*Put "Categories" styles here*/
+
+
+/**
+ 	=== SECONDARY PAGE STYLES ===
+**/
+
+.secondary h3 {
+	font-family: "Open Sans";
+	font-size: 20px;
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+}
+.secondary p {
+	font-family: Arial;
+	font-size: 14px;
+	color: rgb(0, 0, 0);
+}
+.secondary a {
+	color: rgb(46, 95, 151);
+}
+
+
+
+
