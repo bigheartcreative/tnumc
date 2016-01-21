@@ -45,7 +45,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1024);
 $global-lineheight: 1.5;
 $primary-color: #2e5f97;
 $secondary-color: #777;
@@ -544,7 +544,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
-$topbar-link-color: $primary-color;
+$topbar-background: $primary-color;
+$topbar-link-color: $white;
 $topbar-input-width: 200px;
 
