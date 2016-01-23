@@ -23,7 +23,7 @@
 		</div>
 	</div>
 </div>
-<div id="nav-bar" class="show-for-medium">
+<div id="nav-bar-menu" class="show-for-medium nav-bar">
 	<div class="row">
 		<div class="top-bar-left row float-left">
 			<?php joints_top_nav(); ?>	

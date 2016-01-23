@@ -373,7 +373,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 0.7rem 2rem;
 $menu-icon-spacing: 0.25rem;
 $menu-expand-max: 6;
 
@@ -540,11 +540,12 @@ $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-pip-offset: 1.25rem;
 $tooltip-radius: $global-radius;
 
-// 35. Top Bar
+// 35. Top Bar & Nav Bar
 // -----------
 
 $topbar-padding: 0.5rem;
 $topbar-background: $primary-color;
+$navbar-background: $light-blue;
 $topbar-link-color: $white;
 $topbar-input-width: 200px;
 
