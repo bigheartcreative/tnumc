@@ -1,7 +1,7 @@
 					<footer class="footer" role="contentinfo">
 						<div id="inner-footer" class="row">
 							<div class="small-9 medium-4 columns">
-								<h6>Contact Us</h6>
+								<h5>Contact Us</h5>
 								<p>304 S. Perimeter Park Drive</p>
 								<p>Nashville, TN 37211</p>
 								<p>615.329.1177</p>
@@ -11,7 +11,7 @@
 		    				</div>
 		    				<!-- replace with Forms widget -->
 		    				<div class="small-9 medium-4 columns">
-		    					<h6>eNewsletter Subscription</h6>
+		    					<h5><span>e</span>Newsletter Subscription</h5>
 								<form action="">
 									<input type="text" placeholder="First Name">
 									<input type="text" placeholder="Last Name">
@@ -20,7 +20,7 @@
 								</form>
 		    				</div>
 		    				<div class="small-9 medium-4 columns">
-								<h6>Connect With Us</h6>
+								<h5>Connect With Us</h5>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="Facebook"></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="Twitter"></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="YouTube"></a>
