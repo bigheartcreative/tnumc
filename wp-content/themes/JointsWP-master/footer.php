@@ -11,6 +11,7 @@
 		    				</div>
 		    				<!-- replace with Forms widget -->
 		    				<div class="small-9 medium-4 columns">
+		    					<h6>eNewsletter Subscription</h6>
 								<form action="">
 									<input type="text" placeholder="First Name">
 									<input type="text" placeholder="Last Name">
