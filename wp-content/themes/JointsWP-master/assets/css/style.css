@@ -4025,11 +4025,10 @@ FOOTER STYLES
   clear: both;
   margin-top: 1em; }
   .footer #inner-footer {
-    border-top: 1px solid #cacaca;
-    padding: 4rem 0; }
+    border-top: 1px solid #cacaca; }
   .footer span {
     text-transform: none; }
-  .footer .copyright {
+  .footer div {
     margin-top: 3rem; }
 
 /*********************

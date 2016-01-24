@@ -510,14 +510,13 @@ FOOTER STYLES
 
 	#inner-footer {
 		border-top: $hr-border;
-		padding: ($global-padding * 4) 0;
 	}
 
 	span {
 		text-transform: none;
 	}
 
-	.copyright {
+	div {
 		margin-top: $global-margin * 3;
 	}
 }
