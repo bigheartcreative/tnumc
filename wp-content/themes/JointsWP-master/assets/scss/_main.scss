@@ -50,6 +50,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
+	margin-bottom: $header-margin-bottom * 4;
 
 }
 
@@ -508,7 +509,16 @@ FOOTER STYLES
 	margin-top: 1em;
 
 	#inner-footer {
-		border-top: 1px solid $medium-gray;
+		border-top: $hr-border;
+		padding: ($global-padding * 4) 0;
+	}
+
+	span {
+		text-transform: none;
+	}
+
+	.copyright {
+		margin-top: $global-margin * 3;
 	}
 }
 

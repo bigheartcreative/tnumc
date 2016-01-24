@@ -3784,6 +3784,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
     text-decoration: none; }
 
+h5, .h5 {
+  margin-bottom: 2rem; }
+
 /*********************
 HEADER STYLES
 *********************/
@@ -4022,7 +4025,12 @@ FOOTER STYLES
   clear: both;
   margin-top: 1em; }
   .footer #inner-footer {
-    border-top: 1px solid #cacaca; }
+    border-top: 1px solid #cacaca;
+    padding: 4rem 0; }
+  .footer span {
+    text-transform: none; }
+  .footer .copyright {
+    margin-top: 3rem; }
 
 /*********************
 FOUNDATION STYLES
