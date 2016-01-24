@@ -107,6 +107,7 @@ $global-right: if($global-text-direction == rtl, left, right);
 $foundation-colors: (
   primary: $primary-color,
   secondary: $secondary-color,
+  light-blue: $light-blue-color,
   success: $success-color,
   alert: $alert-color,
   warning: $warning-color,
@@ -282,6 +283,15 @@ $foundation-colors: (
 
   /* Links
      ========================================================================== */
+
+  /**
+   * Set global link color.
+   */
+   
+  a:hover {
+	  color: $primary-color;
+  }
+
 
   /**
    * Remove the gray background color from active links in IE 10.

@@ -13,7 +13,7 @@ $topbar-padding: 0.5rem !default;
 /// Background color for the top bar. This color also cascades to menus within the top bar.
 /// @type Color
 $topbar-background: $primary-color !default;
-$navbar-background: $light-blue !default;
+$navbar-background: $light-blue-color !default;
 
 /// Color for links inside a top bar menu.
 /// @type Color
@@ -52,6 +52,22 @@ $topbar-input-width: 200px !default;
   background-color: $navbar-background;
 }
 
+@mixin logo-bar-container {
+  @include clearfix;
+  
+  background-color: transparent;
+  
+  .logo {
+	  display: block;
+	  padding: 1.5rem 0;
+  }
+  
+  .button-block {
+	  padding: 2.5rem 0 1.5rem;
+  }
+}
+
+
 /// makes sections stacked
 @mixin top-bar-stacked {
   // Sub-sections
@@ -73,6 +89,11 @@ $topbar-input-width: 200px !default;
   .nav-bar {
 	  @include nav-bar-container;
   }
+
+  .logo-bar {
+	  @include logo-bar-container;
+  }  
+  
 
   // Generate classes for stacking on each screen size (defined in $breakpoint-classes)
   @each $size in $breakpoint-classes {

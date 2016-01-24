@@ -49,6 +49,7 @@ $global-width: rem-calc(1024);
 $global-lineheight: 1.5;
 $primary-color: #2e5f97;
 $secondary-color: #777;
+$light-blue-color: #5493d0;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -57,7 +58,7 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$light-blue: #5493d0;
+$red: #f44029;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: Arial, Helvetica, Roboto, sans-serif;
@@ -65,7 +66,7 @@ $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
-$global-weight-bold: bold;
+$global-weight-bold: 700;
 $global-radius: none;
 $global-text-direction: ltr;
 
@@ -200,7 +201,7 @@ $accordion-content-padding: 1rem;
 // 8. Accordion Menu
 // -----------------
 
-$accordionmenu-arrows: true;
+$accordionmenu-arrows: false;
 $accordionmenu-arrow-color: $primary-color;
 
 // 9. Badge
@@ -281,7 +282,7 @@ $closebutton-color-hover: $black;
 // -------------
 
 $drilldown-transition: transform 0.15s linear;
-$drilldown-arrows: true;
+$drilldown-arrows: false;
 $drilldown-arrow-color: $primary-color;
 $drilldown-background: $white;
 
@@ -302,11 +303,12 @@ $dropdown-sizes: (
 // 17. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
+$dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $anchor-color;
-$dropdownmenu-min-width: 200px;
+$dropdownmenu-min-width: 285px;
 $dropdownmenu-background: $white;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: none;
+$dropdownmenu-padding:1rem 0;
 
 // 18. Flex Video
 // --------------
@@ -545,7 +547,7 @@ $tooltip-radius: $global-radius;
 
 $topbar-padding: 0.5rem;
 $topbar-background: $primary-color;
-$navbar-background: $light-blue;
+$navbar-background: $light-blue-color;
 $topbar-link-color: $white;
 $topbar-input-width: 200px;
 

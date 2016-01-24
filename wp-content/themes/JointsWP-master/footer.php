@@ -20,9 +20,9 @@
 		    				</div>
 		    				<div class="small-9 medium-4 columns">
 								<h6>Connect With Us</h6>
-								<a href="#"><img src="/tnumc/wp-content/themes/JointsWP-master/assets/images/facebook.png" alt="Facebook"></a>
-								<a href="#"><img src="/tnumc/wp-content/themes/JointsWP-master/assets/images/twitter.png" alt="Twitter"></a>
-								<a href="#"><img src="/tnumc/wp-content/themes/JointsWP-master/assets/images/youtube.png" alt="YouTube"></a>
+								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="Facebook"></a>
+								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="Twitter"></a>
+								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="YouTube"></a>
 		    				</div>
 							<div class="large-12 medium-12 columns">
 								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>

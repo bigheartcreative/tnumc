@@ -26,6 +26,8 @@ $menu-icon-spacing: 0.25rem !default;
 /// @type Number
 $menu-expand-max: 6 !default;
 
+$hover-border-top-width: 0.3rem;
+
 /// Creates the base styles for a Menu.
 @mixin menu-base {
   margin: $menu-margin;
@@ -41,7 +43,6 @@ $menu-expand-max: 6 !default;
   // Reset line height to make the height of the overall item easier to calculate
   > li:not(.menu-text) > a {
     display: block;
-    padding: $menu-item-padding;
     line-height: 1;
   }
 
@@ -58,6 +59,16 @@ $menu-expand-max: 6 !default;
   display: table;
   table-layout: fixed;
   width: 100%;
+}
+
+/// Sets top level hover style
+@mixin top-level-menu-hover {
+	background-color: $white;
+	border-top: $hover-border-top-width solid $red;
+	
+	a {
+		color: $primary-color;
+	}
 }
 
 /// Sets the direction of a Menu.
@@ -78,7 +89,7 @@ $menu-expand-max: 6 !default;
   }
 }
 
-/// Creates a simple Menu, which has no padding or hover state.
+/// Creates a simple Menu with hover state.
 @mixin menu-simple {
   a {
     padding: 0;
@@ -144,7 +155,7 @@ $menu-expand-max: 6 !default;
   .menu {
     @include menu-base;
     @include menu-icons;
-
+    
     // Orientation
     @include menu-direction(horizontal);
 
@@ -170,7 +181,7 @@ $menu-expand-max: 6 !default;
     &.simple {
       @include menu-simple;
     }
-
+        
     // Align right
     &.align-#{$global-right} {
       > li {
@@ -187,7 +198,7 @@ $menu-expand-max: 6 !default;
       }
     }
 
-    // Vertical icons
+    // Vertical icons 
     &.icon-top {
       @include menu-icons(top, $base: false);
     }
@@ -195,11 +206,31 @@ $menu-expand-max: 6 !default;
     // Nesting
     &.nested {
       @include menu-nested;
-    }
+    }    
   }
 
   .menu-text {
     @include menu-text;
+  }
+  
+  .medium-horizontal {
+    // Normal
+    > li {
+	    border-top: $hover-border-top-width solid transparent;
+	    width: 20%;
+    }
+    > li > a {
+	    text-align: center;
+	    color: $white;
+	    text-transform: uppercase;
+	    font-weight: $global-weight-bold;
+	    padding: 2.0rem 2.0rem;
+    }
+    // Hovers
+    > li:hover, &> .current-menu-item {
+	  @include top-level-menu-hover;
+    }
+
   }
 
   // Prevent FOUC when using the Responsive Menu plugin
