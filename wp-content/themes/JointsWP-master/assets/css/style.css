@@ -1758,7 +1758,7 @@ td {
 
 p {
   font-size: inherit;
-  line-height: 1.6;
+  line-height: 1;
   margin-bottom: 1rem;
   text-rendering: optimizeLegibility; }
 
@@ -1827,7 +1827,7 @@ h6 {
   h4 {
     font-size: 1.5625rem; }
   h5 {
-    font-size: 1.25rem; }
+    font-size: 1.375rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -1854,7 +1854,7 @@ hr {
 ul,
 ol,
 dl {
-  line-height: 1.6;
+  line-height: 1;
   margin-bottom: 1rem;
   list-style-position: outside; }
 
@@ -1883,7 +1883,7 @@ blockquote {
   padding: 0.5625rem 1.25rem 0 1.1875rem;
   border-left: 1px solid #cacaca; }
   blockquote, blockquote p {
-    line-height: 1.6;
+    line-height: 1;
     color: #8a8a8a; }
 
 cite {
@@ -3779,8 +3779,13 @@ a:link, a:visited:link {
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
-  text-decoration: none; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  text-transform: uppercase; }
+  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
+    text-decoration: none; }
+
+h5, .h5 {
+  margin-bottom: 2rem; }
 
 /*********************
 HEADER STYLES
@@ -4035,6 +4040,12 @@ FOOTER STYLES
 .footer {
   clear: both;
   margin-top: 1em; }
+  .footer #inner-footer {
+    border-top: 1px solid #cacaca; }
+  .footer span {
+    text-transform: none; }
+  .footer div {
+    margin-top: 3rem; }
 
 /*********************
 FOUNDATION STYLES
