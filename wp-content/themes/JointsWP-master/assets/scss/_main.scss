@@ -574,3 +574,18 @@ PLUGIN STYLES
     list-style: none outside none;
     margin: 0;
 }
+
+h3.gform_title,
+.gfield_label,
+.name_first label,
+.name_last label {
+	display: none;
+}
+
+div#gform_wrapper_1 {
+	margin-top: -15px;
+}
+
+.ginput_container.ginput_container_email {
+	margin-top: 0;
+}
