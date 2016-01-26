@@ -4,7 +4,9 @@
 <div class="top-bar show-for-medium" id="top-bar-menu">
 	<div class="row">
 		<div class="top-bar-right float-right">
-			<a class="search-icon float-right"></a>
+			<svg class="search-icon Icon float-right">
+				<use xlink:href="#icon-search"></use>
+			</svg>
 			<a class="language float-right">English</a></li>
 			<a class="float-right">Staff</a>
 			<a class="float-right">Districts</a>
