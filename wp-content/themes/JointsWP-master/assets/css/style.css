@@ -3901,6 +3901,20 @@ POSTS & CONTENT STYLES
     background-color: #275180;
     color: #fff; }
 
+.responsive-background {
+  min-height: 80rem;
+  background-position: center top;
+  background-repeat: no-repeat; }
+  @media screen and (min-width: 64em) {
+    .responsive-background {
+      background-size: 100% auto; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .responsive-background {
+      background-size: 100% auto; } }
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+    .responsive-background {
+      background-size: cover; } }
+
 /*********************
 IMAGE GALLERY STYLES
 *********************/

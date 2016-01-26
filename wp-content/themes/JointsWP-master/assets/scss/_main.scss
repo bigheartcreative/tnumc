@@ -208,6 +208,24 @@ POSTS & CONTENT STYLES
 	@include button;
 }
 
+// 
+.responsive-background {
+	min-height: 80rem;
+	background-position: center top;
+	background-repeat: no-repeat;
+	
+	@include breakpoint(large) {
+		background-size: 100% auto;
+	}
+	@include breakpoint(medium only) {
+		background-size: 100% auto;
+	}
+	@include breakpoint(small only) {
+		background-size: cover;
+	}
+}
+
+
 /*********************
 IMAGE GALLERY STYLES
 *********************/

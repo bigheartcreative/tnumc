@@ -6,7 +6,7 @@ Template Name: Home (Full Width, No Sidebar)
 
 <?php get_header(); ?>
 			
-	<div id="content">
+	<div id="content" class="responsive-background" style="background-image:url(<?php background_featured_image(); ?>)">
 	
 		<div id="inner-content" class="row">
 	

@@ -40,3 +40,24 @@ function joints_theme_support() {
 	); */	
 	
 } /* end theme support */
+
+
+//TNUMC Specific Functions
+//Return featured image url for homepage and top level pages, if called.
+function background_featured_image() {
+	global $post;
+	$id = $post->ID;
+	
+	if ( has_post_thumbnail( $id )){
+		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+		
+		if ( ! empty( $image_url[0] ) ) {
+			echo esc_url( $image_url[0] );
+		}
+	}
+}
+
+add_action( 'after_setup_theme', 'tnumc_bg_image_mobile' );
+function tnumc_bg_image_mobile() {
+    add_image_size( 'mobile-bg', 640, 600, array( 'center', 'top' ) ); // Hard crop center top
+}
