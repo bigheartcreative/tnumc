@@ -11,7 +11,7 @@
 		    				</div>
 		    				<!-- replace with Forms widget -->
 		    				<div class="small-9 medium-4 columns" id="eNewsletter">
-		    					<h5><span>e</span>Newsletter Subscription</h5>
+		    					<h5><span>e-</span>Newsletter Subscription</h5>
 								<?php gravity_form(1, true, true, false, '', false); ?>
 
 								<!-- <form action="">
