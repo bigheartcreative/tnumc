@@ -1,6 +1,6 @@
 					<footer class="footer" role="contentinfo">
 						<div id="inner-footer" class="row">
-							<div class="small-9 medium-4 columns">
+							<div class="small-9 medium-4 columns" id="contactInfo">
 								<h5>Contact Us</h5>
 								<p>304 S. Perimeter Park Drive</p>
 								<p>Nashville, TN 37211</p>
@@ -10,14 +10,16 @@
 								<p><a href="#">Privacy Policy</a></p>
 		    				</div>
 		    				<!-- replace with Forms widget -->
-		    				<div class="small-9 medium-4 columns">
+		    				<div class="small-9 medium-4 columns" id="eNewsletter">
 		    					<h5><span>e</span>Newsletter Subscription</h5>
-								<form action="">
+								<?php gravity_form(1, true, true, false, '', false); ?>
+
+								<!-- <form action="">
 									<input type="text" placeholder="First Name">
 									<input type="text" placeholder="Last Name">
 									<input type="text" placeholder="Email">
 									<button type="submit">Submit</button>
-								</form>
+								</form> -->
 		    				</div>
 		    				<div class="small-9 medium-4 columns">
 								<h5>Connect With Us</h5>
