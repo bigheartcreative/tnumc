@@ -3720,7 +3720,7 @@ table.hover tr:nth-of-type(even):hover {
     clear: both; }
 
 .logo-bar {
-  background-color: transparent; }
+  background-color: rgba(255, 255, 255, 0.7); }
   .logo-bar::before, .logo-bar::after {
     content: ' ';
     display: table; }
@@ -3794,8 +3794,12 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-.header ul.off-canvas-list li {
-  list-style: none; }
+.header {
+  z-index: 1;
+  display: block;
+  position: relative; }
+  .header ul.off-canvas-list li {
+    list-style: none; }
 
 /*********************
 NAVIGATION STYLES
@@ -3818,6 +3822,12 @@ NAVIGATION STYLES
 
 .top-bar .language {
   padding: 0 2rem; }
+
+.logo-bar .logo-icon {
+  display: block;
+  max-height: 3.9rem;
+  max-width: 100%;
+  color: #0a0a0a; }
 
 .off-canvas-list ul {
   margin-left: 0; }
@@ -3906,15 +3916,21 @@ POSTS & CONTENT STYLES
     color: #fff; }
 
 .responsive-background {
-  min-height: 80rem;
+  min-height: 40rem;
   background-position: center top;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0; }
   @media screen and (min-width: 64em) {
     .responsive-background {
-      background-size: 100% auto; } }
+      background-size: 100% auto;
+      margin: -14rem 0 0;
+      padding: 14rem 0 0; } }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .responsive-background {
-      background-size: 100% auto; } }
+      background-size: 100% auto;
+      margin: -18rem 0 0;
+      padding: 18rem 0 0; } }
   @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     .responsive-background {
       background-size: cover; } }

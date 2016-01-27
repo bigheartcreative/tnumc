@@ -55,7 +55,7 @@ $topbar-input-width: 200px !default;
 @mixin logo-bar-container {
   @include clearfix;
   
-  background-color: transparent;
+  background-color: rgba(255,255,255, .7);
   
   .logo {
 	  display: block;

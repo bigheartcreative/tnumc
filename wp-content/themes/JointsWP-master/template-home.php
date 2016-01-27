@@ -6,8 +6,13 @@ Template Name: Home (Full Width, No Sidebar)
 
 <?php get_header(); ?>
 			
-	<div id="content" class="responsive-background" style="background-image:url(<?php background_featured_image(); ?>)">
 	
+	<div id="feature" class="responsive-background" style="background-image:url(<?php background_featured_image(); ?>)">
+		
+	</div> <!-- end #feature -->	
+
+	<div id="content">
+
 		<div id="inner-content" class="row">
 	
 		    <main id="main" class="large-12 medium-12 columns" role="main">
@@ -20,7 +25,7 @@ Template Name: Home (Full Width, No Sidebar)
 
 			</main> <!-- end #main -->
 		    
-		</div> <!-- end #inner-content -->
+		</div> <!-- end #inner-content -->		
 	
 	</div> <!-- end #content -->
 

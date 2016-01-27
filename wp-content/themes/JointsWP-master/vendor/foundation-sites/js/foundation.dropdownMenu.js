@@ -55,7 +55,7 @@
      * @option
      * @example 50
      */
-    hoverDelay: 50,
+    hoverDelay: 0,
     /**
      * Allow a submenu to open/remain open on parent click event. Allows cursor to move away from menu.
      * @option
@@ -68,7 +68,7 @@
      * @example 500
      */
 
-    closingTime: 500,
+    closingTime: 0,
     /**
      * Position of the menu relative to what direction the submenus should open. Handled by JS.
      * @option

@@ -18,9 +18,13 @@
 <div class="logo-bar" id="logo-bar-menu">
 	<div class="logo-row row align-middle">
 		<div class="medium-4 columns">
-			<a class="logo" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/assets/images/umclogo.png" alt="<?php bloginfo('name'); ?>" /></a>
+			<a class="logo" href="<?php echo home_url(); ?>">
+				<svg class="logo-icon Icon">
+					<use xlink:href="#icon-logo"></use>
+				</svg>
+			</a>
 		</div>
-		<div class="medium-8 columns text-right button-block">
+		<div class="medium-8 columns text-right button-block show-for-medium">
 			<a class="light-blue button" href="#">About Us</a>
 			<a class="light-blue button" href="#">Communications</a>
 			<a class="light-blue button" href="#">Forms</a>
