@@ -141,7 +141,9 @@ POSTS & CONTENT STYLES
 }
 
 .single-title {
-	
+	color: $black;
+	font-size: 1.25em;
+	margin-bottom: 1em;
 }
 
 .page-title {
@@ -157,15 +159,34 @@ POSTS & CONTENT STYLES
 
 }
 
+
+// Breadcrumbs
+#crumbs {
+	margin-bottom: 2em;
+	font-size: .75em;
+}
+
 // Post meta  
 .byline {
-	color: #999;
+	color: $black;
 	time {}
+}
+
+.author {
+	color: $black;
+	font-weight: $global-weight-bold;
+	font-size: .875em;
+}
+
+.post_info {
+	color: $black;
+	font-weight: $global-weight-normal;
+	font-size: .875em;
+	margin-bottom: 2.5rem;
 }
 
 // Entry content  
 .entry-content {
-	
 	img {
 		max-width: 100%;
 		height: auto;

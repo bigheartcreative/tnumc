@@ -1884,7 +1884,7 @@ blockquote {
   border-left: 1px solid #cacaca; }
   blockquote, blockquote p {
     line-height: 1;
-    color: #8a8a8a; }
+    color: #0a0a0a; }
 
 cite {
   display: block;
@@ -2522,8 +2522,7 @@ select {
     float: left;
     color: #0a0a0a;
     font-size: 0.6875rem;
-    cursor: default;
-    text-transform: uppercase; }
+    cursor: default; }
     .breadcrumbs li:not(:last-child)::after {
       color: #cacaca;
       content: "/";
@@ -3842,12 +3841,32 @@ POSTS & CONTENT STYLES
 #content #inner-content {
   padding: 1rem 0rem; }
 
+.single-title {
+  color: #0a0a0a;
+  font-size: 1.25em;
+  margin-bottom: 1em; }
+
 .page-title .vcard {
   border: 0px;
   padding: 0px; }
 
+#crumbs {
+  margin-bottom: 2em;
+  font-size: .75em; }
+
 .byline {
-  color: #999; }
+  color: #0a0a0a; }
+
+.author {
+  color: #0a0a0a;
+  font-weight: 700;
+  font-size: .875em; }
+
+.post_info {
+  color: #0a0a0a;
+  font-weight: normal;
+  font-size: .875em;
+  margin-bottom: 2.5rem; }
 
 .entry-content img {
   max-width: 100%;
@@ -3887,7 +3906,7 @@ POSTS & CONTENT STYLES
     margin-bottom: 0;
     width: 100%; }
   .wp-caption p.wp-caption-text {
-    font-size: 0.85em;
+    font-size: 0.75em;
     margin: 4px 0 7px;
     text-align: center; }
 
