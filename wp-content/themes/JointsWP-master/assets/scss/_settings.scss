@@ -290,9 +290,9 @@ $drilldown-background: $white;
 // ------------
 
 $dropdown-padding: 1rem;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-border: none;
 $dropdown-font-size: 16rem;
-$dropdown-width: 300px;
+$dropdown-width: auto;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
   tiny: 100px,

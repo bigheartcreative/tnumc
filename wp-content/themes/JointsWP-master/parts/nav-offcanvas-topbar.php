@@ -7,8 +7,15 @@
 			<svg class="search-icon Icon float-right">
 				<use xlink:href="#icon-search"></use>
 			</svg>
-			<a class="language float-right">English</a></li>
-			<a class="float-right">Staff</a>
+			<a class="language float-right" data-toggle="lang-dropdown">English</a>
+			<ul class="dropdown-pane" id="lang-dropdown" data-dropdown data-hover="true">
+				<li><a>English</a></li>
+				<li><a>Korean</a></li>
+				<li><a>French</a></li>
+				<li><a>Portuguese</a></li>
+				<li><a>Spanish</a></li>
+			</ul>
+			<a class="first float-right">Staff</a>
 			<a class="float-right">Districts</a>
 			<a class="float-right">Bishop</a>
 			<a class="float-right">Churches</a>

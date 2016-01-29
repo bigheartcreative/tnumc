@@ -2940,7 +2940,7 @@ Foundation.Motion = Motion;
      * @option
      * @example 250
      */
-    hoverDelay: 250,
+    hoverDelay: 0,
     /**
      * Allow submenus to open on hover events
      * @option
@@ -2952,7 +2952,7 @@ Foundation.Motion = Motion;
      * @option
      * @example true
      */
-    hoverPane: false,
+    hoverPane: true,
     /**
      * Number of pixels between the dropdown pane and the triggering element on open.
      * @option
