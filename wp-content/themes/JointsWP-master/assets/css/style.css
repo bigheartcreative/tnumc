@@ -3910,6 +3910,25 @@ POSTS & CONTENT STYLES
     margin: 4px 0 7px;
     text-align: center; }
 
+blockquote {
+  border-left: none; }
+  blockquote p {
+    font-family: Arial, Helvetica, Roboto, sans-serif;
+    font-size: 1.625em;
+    font-weight: 700;
+    font-style: italic; }
+    blockquote p::before {
+      content: "\201C"; }
+    blockquote p::after {
+      content: "\201D"; }
+
+cite {
+  font-style: normal;
+  font-size: 0.95em;
+  padding-left: 2em; }
+  cite::before {
+    content: '\2013 \0020'; }
+
 .post-password-form input[type="submit"] {
   display: inline-block;
   text-align: center;

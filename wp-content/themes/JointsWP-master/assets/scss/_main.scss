@@ -241,6 +241,35 @@ POSTS & CONTENT STYLES
 	}
 } 
 
+blockquote {
+	border-left: none;
+
+	p {
+		font-family: $body-font-family;
+		font-size: 1.625em;
+		font-weight: 700;
+		font-style: italic;
+
+		&::before {
+			content: "\201C";
+		}
+
+		&::after {
+			content: "\201D";
+		}
+	}
+}
+
+cite {
+	font-style: normal;
+	font-size: 0.95em;
+	padding-left: 2em;
+
+	&::before {
+		content: '\2013 \0020';
+	}
+}
+
 // Add Foundation styling to password protect button
 .post-password-form input[type="submit"] {
 	@include button;
