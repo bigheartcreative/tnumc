@@ -18,8 +18,6 @@
 
 		</main> <!-- end #main -->
 
-	<!-- 	<?php dimox_breadcrumbs(); ?> -->
-
 	</div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
