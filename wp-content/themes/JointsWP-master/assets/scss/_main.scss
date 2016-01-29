@@ -224,8 +224,6 @@ POSTS & CONTENT STYLES
 
 .wp-caption {
 	max-width: 100%;
-	background: #eee;
-	padding: 5px;
 
 	// Images inside wp-caption  
 	img {
@@ -236,8 +234,9 @@ POSTS & CONTENT STYLES
 
 	p.wp-caption-text {
 		font-size: 0.75em;
-		margin: 4px 0 7px;
-		text-align: center;
+		line-height: 1.5;
+		margin: 5px 0 7px;
+		text-align: left;
 	}
 } 
 
