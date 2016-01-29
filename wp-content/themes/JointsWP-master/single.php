@@ -18,7 +18,7 @@
 
 		</main> <!-- end #main -->
 
-		<?php get_sidebar(); ?>
+	<!-- 	<?php dimox_breadcrumbs(); ?> -->
 
 	</div> <!-- end #inner-content -->
 

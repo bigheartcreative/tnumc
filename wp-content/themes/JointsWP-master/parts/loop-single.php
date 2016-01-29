@@ -1,5 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
+	
+	<?php dimox_breadcrumbs(); ?>	
+
 	<header class="article-header">	
 		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
@@ -11,6 +13,7 @@
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
+		<!-- Should categories go here instead of tags? -->
 		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>	</footer> <!-- end article footer -->
 									
 	<?php comments_template(); ?>	
