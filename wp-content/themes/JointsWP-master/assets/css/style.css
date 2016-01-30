@@ -2615,11 +2615,11 @@ select {
 .callout {
   margin: 0 0 1rem 0;
   padding: 1rem;
-  border: 1px solid rgba(10, 10, 10, 0.25);
+  border: none;
   border-radius: none;
   position: relative;
   color: #0a0a0a;
-  background-color: white; }
+  background-color: #f7f7f7; }
   .callout > :first-child {
     margin-top: 0; }
   .callout > :last-child {
@@ -3800,9 +3800,6 @@ HEADER STYLES
   .header ul.off-canvas-list li {
     list-style: none; }
 
-.search-bar.expanded {
-  display: block; }
-
 .search-bar {
   background: #e6e6e6;
   display: none; }
@@ -3813,6 +3810,9 @@ HEADER STYLES
     padding-left: 1rem; }
   .search-bar input[type='search'] {
     text-align: right; }
+
+.search-bar.expanded {
+  display: block; }
 
 /*********************
 NAVIGATION STYLES
