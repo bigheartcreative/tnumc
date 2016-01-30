@@ -1,12 +1,23 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
-
+<div class="search-bar show-for-medium" id="search-header" data-toggler=".expanded">
+	<form role="search" method="get" class="search-form" action="">
+		<div class="row input-group">
+			<input type="search"class="search-field input-group-field" placeholder="Search TNUMC.org" value="" name="s" title="Search for:" type="search">
+			<div class="input-group-button">
+				<input type="submit" class="search-submit button" value="Search">
+			</div>
+		</div>
+	</form>
+</div>
 <div class="top-bar show-for-medium" id="top-bar-menu">
 	<div class="row">
 		<div class="top-bar-right float-right">
-			<svg class="search-icon Icon float-right">
-				<use xlink:href="#icon-search"></use>
-			</svg>
+			<a class="float-right search-trigger" data-toggle="search-header">
+				<svg class="search-icon Icon">
+					<use xlink:href="#icon-search"></use>
+				</svg>
+			</a>
 			<a class="language float-right" data-toggle="lang-dropdown">English</a>
 			<ul class="dropdown-pane" id="lang-dropdown" data-dropdown data-hover="true">
 				<li><a>English</a></li>

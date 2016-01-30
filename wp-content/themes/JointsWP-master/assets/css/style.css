@@ -3693,7 +3693,7 @@ table.hover tr:nth-of-type(even):hover {
     transform: translateY(-50%); }
 
 .top-bar {
-  padding: 0.5rem; }
+  padding: 0; }
   .top-bar::before, .top-bar::after {
     content: ' ';
     display: table; }
@@ -3800,6 +3800,20 @@ HEADER STYLES
   .header ul.off-canvas-list li {
     list-style: none; }
 
+.search-bar.expanded {
+  display: block; }
+
+.search-bar {
+  background: #e6e6e6;
+  display: none; }
+  .search-bar .input-group {
+    margin: 0 auto;
+    padding: 0.5rem 0; }
+  .search-bar .input-group-button {
+    padding-left: 1rem; }
+  .search-bar input[type='search'] {
+    text-align: right; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -3809,7 +3823,7 @@ NAVIGATION STYLES
 .top-bar a {
   line-height: 1;
   font-size: 80%;
-  padding: 0 0.5rem; }
+  padding: 0.5rem; }
 
 .top-bar a.first {
   margin: 0 1rem 0 0; }
@@ -3824,7 +3838,7 @@ NAVIGATION STYLES
   color: #fefefe; }
 
 .top-bar .language {
-  padding: 0 1rem; }
+  padding: 0.5rem 1rem 0; }
 
 .logo-bar .logo-icon {
   display: block;
