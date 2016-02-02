@@ -258,6 +258,42 @@ POSTS & CONTENT STYLES
 
 } 
 
+// Blockquotes
+blockquote {
+	margin: 0 0 $paragraph-margin-bottom;
+    padding: $blockquote-padding;
+    border-#{$global-left}: $blockquote-border;
+
+    & p {
+    	line-height: $paragraph-lineheight;
+      	color: $blockquote-color;
+      	font-size: 1.625rem;
+		font-weight: bold;
+		font-style: italic;
+
+		&::before {
+			content: "\201C";
+		}
+
+		&::after {
+			content: "\201D";
+		}
+    }
+}
+
+// Citations
+  cite {
+    display: block;
+    font-size: $cite-font-size;
+    color: $cite-color;
+    font-style: normal;
+    padding-left: 3rem;
+
+    &:before {
+      content: '\2013 \0020';
+    }
+  }
+
 .wp-caption {
 	max-width: 100%;
 	background: #eee;
