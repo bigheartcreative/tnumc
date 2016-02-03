@@ -4168,24 +4168,43 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-.gform_body ul {
+.eNewsletter .gform_body ul {
   list-style: none outside none;
   margin: 0; }
 
-h3.gform_title,
-.gfield_label,
-.name_first label,
-.name_last label {
+.eNewsletter h3.gform_title,
+.eNewsletter .gfield_label,
+.eNewsletter .name_first label,
+.eNewsletter .name_last label {
   display: none; }
 
-div#gform_wrapper_1 {
+.eNewsletter div#gform_wrapper_1 {
   margin-top: -15px; }
 
-.ginput_container.ginput_container_email {
+.eNewsletter .ginput_container.ginput_container_email {
   margin-top: 0; }
 
-.gform_footer.top_label {
+.eNewsletter .gform_footer.top_label {
   text-align: center; }
+
+.layLeader__form .gfield {
+  margin-bottom: 1rem; }
+
+.layLeader__form .gform_body ul {
+  list-style: none outside none;
+  margin: 0; }
+
+.layLeader__form h3.gform_title,
+.layLeader__form .name_first label,
+.layLeader__form #input_2_10 label {
+  display: none; }
+
+.layLeader__form .layLeader__elected,
+.layLeader__form .layLeader__favColor {
+  width: 30%; }
+
+.layLeader__form .layLeader__captcha {
+  margin: 3rem 0; }
 
 /******************************************************************
 

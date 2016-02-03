@@ -726,26 +726,61 @@ FOUNDATION STYLES
 PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
-.gform_body ul {
-    list-style: none outside none;
-    margin: 0;
+
+.eNewsletter {
+	.gform_body ul {
+	    list-style: none outside none;
+	    margin: 0;
+	}
+
+	h3.gform_title,
+	.gfield_label,
+	.name_first label,
+	.name_last label {
+		display: none;
+	}
+
+	div#gform_wrapper_1 {
+		margin-top: -15px;
+	}
+
+	.ginput_container.ginput_container_email {
+		margin-top: 0;
+	}
+
+	.gform_footer.top_label {
+		text-align: center;
+	}
 }
 
-h3.gform_title,
-.gfield_label,
-.name_first label,
-.name_last label {
-	display: none;
+.layLeader__form {
+
 }
 
-div#gform_wrapper_1 {
-	margin-top: -15px;
-}
 
-.ginput_container.ginput_container_email {
-	margin-top: 0;
-}
 
-.gform_footer.top_label {
-	text-align: center;
+.layLeader__form {
+	& .gfield {
+		margin-bottom: 1rem;
+	}
+
+	.gform_body ul {
+	    list-style: none outside none;
+	    margin: 0;
+	}
+
+	h3.gform_title,
+	.name_first label,
+	#input_2_10 label  {
+		display: none;
+	}
+
+	& .layLeader__elected,
+	& .layLeader__favColor {
+		width: 30%;
+	}
+
+	& .layLeader__captcha {
+		margin: 3rem 0;
+	}
 }
