@@ -672,6 +672,41 @@ FOOTER STYLES
 
 	#inner-footer {
 		border-top: $hr-border;
+
+		& #contactInfo p {
+			font-size: 0.875rem;
+			line-height: .5;
+		
+			& #infoEmail {
+				font-style: italic;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			& #hoursDirections {
+				display: inline-block;
+				margin-top: 1rem;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			& #privacyPolicy {
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		& #connect a {
+			margin-right: 1rem;
+
+		}
+
 	}
 
 	span {

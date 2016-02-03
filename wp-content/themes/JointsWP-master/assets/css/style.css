@@ -4141,6 +4141,22 @@ FOOTER STYLES
   margin-top: 1em; }
   .footer #inner-footer {
     border-top: 1px solid #cacaca; }
+    .footer #inner-footer #contactInfo p {
+      font-size: 0.875rem;
+      line-height: .5; }
+      .footer #inner-footer #contactInfo p #infoEmail {
+        font-style: italic; }
+        .footer #inner-footer #contactInfo p #infoEmail:hover {
+          text-decoration: underline; }
+      .footer #inner-footer #contactInfo p #hoursDirections {
+        display: inline-block;
+        margin-top: 1rem; }
+        .footer #inner-footer #contactInfo p #hoursDirections:hover {
+          text-decoration: underline; }
+      .footer #inner-footer #contactInfo p #privacyPolicy:hover {
+        text-decoration: underline; }
+    .footer #inner-footer #connect a {
+      margin-right: 1rem; }
   .footer span {
     text-transform: none; }
   .footer div {
