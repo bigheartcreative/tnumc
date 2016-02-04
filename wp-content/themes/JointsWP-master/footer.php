@@ -5,11 +5,10 @@
 								<p>304 S. Perimeter Park Drive</p>
 								<p>Nashville, TN 37211</p>
 								<p>615.329.1177</p>
-								<p><a href="#">info@TNUMC.org</a></p>
-								<p><a href="#">Hours &amp; Directions</a></p>
-								<p><a href="#">Privacy Policy</a></p>
+								<p><a href="#" id="infoEmail">info@TNUMC.org</a></p>
+								<p><a href="#" id="hoursDirections">Hours &amp; Directions</a></p>
+								<p><a href="#" id="privacyPolicy">Privacy Policy</a></p>
 		    				</div>
-		    				<!-- replace with Forms widget -->
 		    				<div class="small-9 medium-4 columns" id="eNewsletter">
 		    					<h5><span>e-</span>Newsletter Subscription</h5>
 								<?php gravity_form(1, true, true, false, '', false); ?>
@@ -21,7 +20,7 @@
 									<button type="submit">Submit</button>
 								</form> -->
 		    				</div>
-		    				<div class="small-9 medium-4 columns">
+		    				<div class="small-9 medium-4 columns" id="connect">
 								<h5>Connect With Us</h5>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="Facebook"></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="Twitter"></a>

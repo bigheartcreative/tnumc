@@ -198,7 +198,7 @@ POSTS & CONTENT STYLES
 
 .single-title {
 	color: $black;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	margin-bottom: 1em;
 }
 
@@ -243,6 +243,13 @@ POSTS & CONTENT STYLES
 
 // Entry content  
 .entry-content {
+	margin-bottom: 3rem;
+	
+	& p {
+		font-size: 0.875rem;
+		line-height: 2;
+	}
+
 	img {
 		max-width: 100%;
 		height: auto;
@@ -276,26 +283,64 @@ POSTS & CONTENT STYLES
 		padding: 10px;
 		}
 
-} 
 
-.wp-caption {
-	max-width: 100%;
-	background: #eee;
-	padding: 5px;
+	// Blockquotes
+	blockquote {
+		margin: 0;
+	    padding: $blockquote-padding;
+	    border-#{$global-left}: $blockquote-border;
 
-	// Images inside wp-caption  
-	img {
+	    & p {
+	    	line-height: 1.5;
+	      	color: $blockquote-color;
+	      	font-size: 1.625rem;
+			font-weight: bold;
+			font-style: italic;
+			margin-bottom: 0.5rem;
+
+			&::before {
+				content: "\201C";
+			}
+
+			&::after {
+				content: "\201D";
+			}
+	    }
+	}
+
+	// Citations
+	  cite {
+	    display: block;
+	    font-size: $cite-font-size;
+	    color: $cite-color;
+	    font-style: normal;
+	    padding-left: 3rem;
+
+	    &:before {
+	      content: '\2013 \0020';
+	    }
+	  }
+
+	.wp-caption {
 		max-width: 100%;
-		margin-bottom: 0;
-		width: 100%;
-	}
+		background: #eee;
+		padding: 5px;
 
-	p.wp-caption-text {
-		font-size: 0.75em;
-		margin: 4px 0 7px;
-		text-align: center;
-	}
-} 
+		// Images inside wp-caption  
+		img {
+			max-width: 100%;
+			margin-bottom: 0;
+			width: 100%;
+		}
+
+		p.wp-caption-text {
+			font-size: 0.75em;
+			margin: 4px 0 7px;
+			text-align: center;
+		}
+	} 
+
+} // Closes .entry-content
 
 // Add Foundation styling to password protect button
 .post-password-form input[type="submit"] {
@@ -671,6 +716,41 @@ FOOTER STYLES
 
 	#inner-footer {
 		border-top: $hr-border;
+
+		& #contactInfo p {
+			font-size: 0.875rem;
+			line-height: .5;
+		
+			& #infoEmail {
+				font-style: italic;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			& #hoursDirections {
+				display: inline-block;
+				margin-top: 1rem;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			& #privacyPolicy {
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		& #connect a {
+			margin-right: 1rem;
+
+		}
+
 	}
 
 	span {
@@ -690,26 +770,61 @@ FOUNDATION STYLES
 PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
-.gform_body ul {
-    list-style: none outside none;
-    margin: 0;
+
+.eNewsletter {
+	.gform_body ul {
+	    list-style: none outside none;
+	    margin: 0;
+	}
+
+	h3.gform_title,
+	.gfield_label,
+	.name_first label,
+	.name_last label {
+		display: none;
+	}
+
+	div#gform_wrapper_1 {
+		margin-top: -15px;
+	}
+
+	.ginput_container.ginput_container_email {
+		margin-top: 0;
+	}
+
+	.gform_footer.top_label {
+		text-align: center;
+	}
 }
 
-h3.gform_title,
-.gfield_label,
-.name_first label,
-.name_last label {
-	display: none;
+.layLeader__form {
+
 }
 
-div#gform_wrapper_1 {
-	margin-top: -15px;
-}
 
-.ginput_container.ginput_container_email {
-	margin-top: 0;
-}
 
-.gform_footer.top_label {
-	text-align: center;
+.layLeader__form {
+	& .gfield {
+		margin-bottom: 1rem;
+	}
+
+	.gform_body ul {
+	    list-style: none outside none;
+	    margin: 0;
+	}
+
+	h3.gform_title,
+	.name_first label,
+	#input_2_10 label  {
+		display: none;
+	}
+
+	& .layLeader__elected,
+	& .layLeader__favColor {
+		width: 30%;
+	}
+
+	& .layLeader__captcha {
+		margin: 3rem 0;
+	}
 }
