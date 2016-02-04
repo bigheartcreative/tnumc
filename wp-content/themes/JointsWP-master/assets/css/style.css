@@ -1880,7 +1880,7 @@ dl {
 
 blockquote {
   margin: 0 0 1rem;
-  padding: 2rem 2rem 0;
+  padding: 1rem 2rem 0;
   border-left: none; }
   blockquote, blockquote p {
     line-height: 1;
@@ -1888,7 +1888,7 @@ blockquote {
 
 cite {
   display: block;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: #8a8a8a; }
   cite:before {
     content: '\2014 \0020'; }
@@ -3867,7 +3867,7 @@ POSTS & CONTENT STYLES
 
 .single-title {
   color: #0a0a0a;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   margin-bottom: 1em; }
 
 .page-title .vcard {
@@ -3892,71 +3892,69 @@ POSTS & CONTENT STYLES
   font-size: .875em;
   margin-bottom: 2.5rem; }
 
-.entry-content img {
-  max-width: 100%;
-  height: auto; }
-
-.entry-content .alignleft, .entry-content img.alignleft {
-  margin-right: 1.5em;
-  display: inline;
-  float: left; }
-
-.entry-content .alignright, .entry-content img.alignright {
-  margin-left: 1.5em;
-  display: inline;
-  float: right; }
-
-.entry-content .aligncenter, .entry-content img.aligncenter {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  clear: both; }
-
-.entry-content video, .entry-content object {
-  max-width: 100%;
-  height: auto; }
-
-.entry-content pre {
-  background: #eee;
-  border: 1px solid #cecece;
-  padding: 10px; }
-
-blockquote {
-  margin: 0 0 1rem;
-  padding: 2rem 2rem 0;
-  border-left: none; }
-  blockquote p {
-    line-height: 1;
-    color: #0a0a0a;
-    font-size: 1.625rem;
-    font-weight: bold;
-    font-style: italic; }
-    blockquote p::before {
-      content: "\201C"; }
-    blockquote p::after {
-      content: "\201D"; }
-
-cite {
-  display: block;
-  font-size: 1rem;
-  color: #8a8a8a;
-  font-style: normal;
-  padding-left: 3rem; }
-  cite:before {
-    content: '\2013 \0020'; }
-
-.wp-caption {
-  max-width: 100%;
-  background: #eee;
-  padding: 5px; }
-  .wp-caption img {
+.entry-content {
+  margin-bottom: 3rem; }
+  .entry-content p {
+    font-size: 0.875rem;
+    line-height: 2; }
+  .entry-content img {
     max-width: 100%;
-    margin-bottom: 0;
-    width: 100%; }
-  .wp-caption p.wp-caption-text {
-    font-size: 0.75em;
-    margin: 4px 0 7px;
-    text-align: center; }
+    height: auto; }
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left; }
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right; }
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both; }
+  .entry-content video, .entry-content object {
+    max-width: 100%;
+    height: auto; }
+  .entry-content pre {
+    background: #eee;
+    border: 1px solid #cecece;
+    padding: 10px; }
+  .entry-content blockquote {
+    margin: 0;
+    padding: 1rem 2rem 0;
+    border-left: none; }
+    .entry-content blockquote p {
+      line-height: 1.5;
+      color: #0a0a0a;
+      font-size: 1.625rem;
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 0.5rem; }
+      .entry-content blockquote p::before {
+        content: "\201C"; }
+      .entry-content blockquote p::after {
+        content: "\201D"; }
+  .entry-content cite {
+    display: block;
+    font-size: 0.9375rem;
+    color: #8a8a8a;
+    font-style: normal;
+    padding-left: 3rem; }
+    .entry-content cite:before {
+      content: '\2013 \0020'; }
+  .entry-content .wp-caption {
+    max-width: 100%;
+    background: #eee;
+    padding: 5px; }
+    .entry-content .wp-caption img {
+      max-width: 100%;
+      margin-bottom: 0;
+      width: 100%; }
+    .entry-content .wp-caption p.wp-caption-text {
+      font-size: 0.75em;
+      margin: 4px 0 7px;
+      text-align: center; }
 
 .post-password-form input[type="submit"] {
   display: inline-block;
@@ -4143,6 +4141,22 @@ FOOTER STYLES
   margin-top: 1em; }
   .footer #inner-footer {
     border-top: 1px solid #cacaca; }
+    .footer #inner-footer #contactInfo p {
+      font-size: 0.875rem;
+      line-height: .5; }
+      .footer #inner-footer #contactInfo p #infoEmail {
+        font-style: italic; }
+        .footer #inner-footer #contactInfo p #infoEmail:hover {
+          text-decoration: underline; }
+      .footer #inner-footer #contactInfo p #hoursDirections {
+        display: inline-block;
+        margin-top: 1rem; }
+        .footer #inner-footer #contactInfo p #hoursDirections:hover {
+          text-decoration: underline; }
+      .footer #inner-footer #contactInfo p #privacyPolicy:hover {
+        text-decoration: underline; }
+    .footer #inner-footer #connect a {
+      margin-right: 1rem; }
   .footer span {
     text-transform: none; }
   .footer div {
@@ -4154,24 +4168,43 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-.gform_body ul {
+.eNewsletter .gform_body ul {
   list-style: none outside none;
   margin: 0; }
 
-h3.gform_title,
-.gfield_label,
-.name_first label,
-.name_last label {
+.eNewsletter h3.gform_title,
+.eNewsletter .gfield_label,
+.eNewsletter .name_first label,
+.eNewsletter .name_last label {
   display: none; }
 
-div#gform_wrapper_1 {
+.eNewsletter div#gform_wrapper_1 {
   margin-top: -15px; }
 
-.ginput_container.ginput_container_email {
+.eNewsletter .ginput_container.ginput_container_email {
   margin-top: 0; }
 
-.gform_footer.top_label {
+.eNewsletter .gform_footer.top_label {
   text-align: center; }
+
+.layLeader__form .gfield {
+  margin-bottom: 1rem; }
+
+.layLeader__form .gform_body ul {
+  list-style: none outside none;
+  margin: 0; }
+
+.layLeader__form h3.gform_title,
+.layLeader__form .name_first label,
+.layLeader__form #input_2_10 label {
+  display: none; }
+
+.layLeader__form .layLeader__elected,
+.layLeader__form .layLeader__favColor {
+  width: 30%; }
+
+.layLeader__form .layLeader__captcha {
+  margin: 3rem 0; }
 
 /******************************************************************
 
