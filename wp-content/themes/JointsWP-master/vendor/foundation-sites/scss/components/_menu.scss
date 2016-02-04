@@ -217,8 +217,14 @@ $hover-border-top-width: 0.3rem;
     // Normal
     > li {
 	    border-top: $hover-border-top-width solid transparent;
+	    border-right: .1rem solid #579ada;
 	    width: 20%;
     }
+    
+    > li:last-child {
+	    border-right: none;
+    }
+    
     > li > a {
 	    text-align: center;
 	    color: $white;
