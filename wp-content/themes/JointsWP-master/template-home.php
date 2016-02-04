@@ -8,7 +8,11 @@ Template Name: Home (Full Width, No Sidebar)
 			
 	
 	<div id="feature" class="responsive-background" style="background-image:url(<?php background_featured_image(); ?>)">
-		
+		<div class="slider-container">
+			<div class="column row">
+				<?php layerslider(1) ?>
+			</div>
+		</div>
 	</div> <!-- end #feature -->	
 
 	<div id="content">

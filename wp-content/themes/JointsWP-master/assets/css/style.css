@@ -19,6 +19,7 @@ Mixins & Constants.
 /*********************
 TOOLS
 *********************/
+@import url("//fonts.googleapis.com/css?family=Open+Sans:600,700,800,400,400italic,600italic,700italic,800italic");
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -1758,7 +1759,7 @@ td {
 
 p {
   font-size: inherit;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 1rem;
   text-rendering: optimizeLegibility; }
 
@@ -1854,7 +1855,7 @@ hr {
 ul,
 ol,
 dl {
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 1rem;
   list-style-position: outside; }
 
@@ -1883,7 +1884,7 @@ blockquote {
   padding: 1rem 2rem 0;
   border-left: none; }
   blockquote, blockquote p {
-    line-height: 1;
+    line-height: 1.5;
     color: #0a0a0a; }
 
 cite {
@@ -2734,8 +2735,7 @@ select {
   min-width: 285px;
   z-index: 1;
   background: #fefefe;
-  border: none;
-  padding: 1rem 0; }
+  border: none; }
   .dropdown.menu .submenu > li {
     width: 100%; }
   .dropdown.menu .submenu > li > a {
@@ -2746,7 +2746,8 @@ select {
   .dropdown.menu .submenu.first-sub {
     top: 100%;
     left: 0;
-    right: auto; }
+    right: auto;
+    padding: 1rem 0; }
   .dropdown.menu .submenu:not(.js-dropdown-nohover) > .is-dropdown-submenu-parent:hover > .dropdown.menu .submenu, .dropdown.menu .submenu.js-dropdown-active {
     display: block; }
 
@@ -2906,7 +2907,11 @@ select {
 
 .medium-horizontal > li {
   border-top: 0.3rem solid transparent;
+  border-right: .1rem solid #579ada;
   width: 20%; }
+
+.medium-horizontal > li:last-child {
+  border-right: none; }
 
 .medium-horizontal > li > a {
   text-align: center;
@@ -3786,9 +3791,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-transform: uppercase; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a {
     text-decoration: none; }
+  .ls-slide h1, .ls-slide .h1, .ls-slide h2, .ls-slide .h2, .ls-slide h3, .ls-slide .h3, .ls-slide h4, .ls-slide .h4, .ls-slide h5, .ls-slide .h5, .ls-slide h6, .ls-slide .h6 {
+    color: #fefefe; }
+
+.ls-slide h1, .ls-slide .h1 {
+  font-weight: 700;
+  text-transform: capitalize; }
+
+.ls-slide h2, .ls-slide .h2 {
+  font-weight: 700;
+  text-transform: capitalize; }
 
 h5, .h5 {
   margin-bottom: 2rem; }
+
+.ls-slide p {
+  line-height: 1.5 !important;
+  font-size: 125%;
+  color: #fefefe; }
 
 /*********************
 HEADER STYLES
@@ -3990,19 +4010,36 @@ POSTS & CONTENT STYLES
     .responsive-background {
       background-size: 100% auto;
       margin: -14rem 0 0;
-      padding: 14rem 0 0; } }
+      padding: 43% 0 2rem; } }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .responsive-background {
       background-size: 100% auto;
       margin: -18rem 0 0;
-      padding: 18rem 0 0; } }
+      padding: 43% 0 2rem; } }
   @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     .responsive-background {
-      background-size: cover; } }
+      background-size: cover;
+      padding: 8rem 0 1rem; } }
+
+.slider-container {
+  background-color: rgba(10, 10, 10, 0.5); }
+
+.ls-preloaded {
+  white-space: normal !important; }
+
+a.ls-l {
+  top: 0 !important; }
 
 /*********************
 IMAGE GALLERY STYLES
 *********************/
+.fill-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-position: center center;
+  background-size: contain; }
+
 /*********************
 PAGE NAVI STYLES
 *********************/
