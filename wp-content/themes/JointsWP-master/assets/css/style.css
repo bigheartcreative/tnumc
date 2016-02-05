@@ -4243,6 +4243,32 @@ PLUGIN STYLES
 .layLeader__form .layLeader__captcha {
   margin: 3rem 0; }
 
+/*********************
+EVENTS CALENDAR STYLES
+*********************/
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+  background: #2e5f97; }
+
+h2.tribe-events-page-title {
+  color: #2e5f97; }
+
+.tribe-events-calendar thead th {
+  background-color: #5493d0;
+  border: none; }
+
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
+  background-color: #2e5f97; }
+
+.tribe-events-nav-next,
+.tribe-events-nav-previous {
+  color: #2e5f97; }
+
+#tribe-events .tribe-events-button {
+  background: #5493d0; }
+
+#tribe-events-content .tribe-events-tooltip h4 {
+  color: #2e5f97; }
+
 /******************************************************************
 
 Stylesheet: Retina Screens & Devices Stylesheet
