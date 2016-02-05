@@ -860,3 +860,11 @@ h2.tribe-events-page-title {
 #tribe-events .tribe-events-button  {
 	background: $light-blue-color;
 }
+
+#tribe-events-content {
+	& .tribe-events-tooltip {
+		& h4 {
+			color: $primary-color;
+		}
+	}
+}

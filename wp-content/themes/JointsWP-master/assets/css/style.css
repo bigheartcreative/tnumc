@@ -4263,6 +4263,9 @@ h2.tribe-events-page-title {
 #tribe-events .tribe-events-button {
   background: #5493d0; }
 
+#tribe-events-content .tribe-events-tooltip h4 {
+  color: #2e5f97; }
+
 /******************************************************************
 
 Stylesheet: Retina Screens & Devices Stylesheet
