@@ -834,6 +834,10 @@ PLUGIN STYLES
 EVENTS CALENDAR STYLES
 *********************/
 
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+	background: $primary-color;
+}
+
 h2.tribe-events-page-title {
 	color: $primary-color;
 }
