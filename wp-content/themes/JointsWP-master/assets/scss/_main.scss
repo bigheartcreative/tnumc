@@ -828,3 +828,35 @@ PLUGIN STYLES
 		margin: 3rem 0;
 	}
 }
+
+
+/*********************
+EVENTS CALENDAR STYLES
+*********************/
+
+h2.tribe-events-page-title {
+	color: $primary-color;
+}
+
+.tribe-events-calendar {
+	& thead {
+
+		& th {
+			background-color: $light-blue-color;
+			border: none;
+		}
+	}
+}
+
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
+	background-color:  $primary-color;
+}
+
+.tribe-events-nav-next,
+.tribe-events-nav-previous {
+	color: $primary-color;
+}
+
+#tribe-events .tribe-events-button  {
+	background: $light-blue-color;
+}
