@@ -188,6 +188,7 @@ POSTS & CONTENT STYLES
 #content {
 	#inner-content {
 		padding: 1rem 0rem;
+		position: relative;
 	}
 }
 
@@ -797,11 +798,6 @@ PLUGIN STYLES
 	}
 }
 
-.layLeader__form {
-
-}
-
-
 
 .layLeader__form {
 	& .gfield {
@@ -824,9 +820,60 @@ PLUGIN STYLES
 		width: 30%;
 	}
 
+	.address_city input,
+	.address_state select,
+	.address_zip input {
+		float: left;
+		width: 30%;
+	}
+
+	.address_state select {
+		margin: 0 5%;
+	}
+
 	& .layLeader__captcha {
 		margin: 3rem 0;
 	}
+
+	& #recaptcha_widget_div {
+		margin-top: 6rem;
+	}
+
+	& #recaptcha_area {
+		margin: 0 auto;
+	}
+
+	& .gform_footer.top_label {
+		text-align: center;
+	}
+}
+
+.form_download {
+    background: $light-gray;
+    text-align: center;
+    width: 18rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: 65px;
+    left: 720px;
+
+
+    & .download_button {
+    	background: $light-blue-color;
+    	color: #fff;
+    	font-size: 1.25rem;
+    	padding: 0.5rem;
+    	border-radius: 0.5rem;
+    	-webkit-transition: background .3s ease;
+    	-moz-transition: background .3s ease;
+    	-ms-transition: background .3s ease;
+    	-o-transition: background .3s ease;
+    	transition: background .3s ease;
+
+    	&:hover {
+    		background: $primary-color;
+    	}
+    }
 }
 
 
