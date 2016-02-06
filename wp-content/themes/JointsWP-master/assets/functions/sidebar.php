@@ -21,6 +21,16 @@ function joints_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
+	register_sidebar(array(
+		'id' => 'homepage_callout',
+		'name' => __('Homepage Callout', 'jointswp'),
+		'description' => __('Full Width callout on homepage.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	));
+
 	/*
 	to add more sidebars or widgetized areas, just copy
 	and edit the above sidebar code. In order to call

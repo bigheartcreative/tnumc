@@ -3885,6 +3885,18 @@ POSTS & CONTENT STYLES
 #content #inner-content {
   padding: 1rem 0rem; }
 
+.lower-shadow::after {
+  content: " ";
+  background: #aaaaaa;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#aaaaaa, white 90%);
+  /* Standard syntax */
+  height: 1rem;
+  display: block; }
+
 .single-title {
   color: #0a0a0a;
   font-size: 1.25rem;
@@ -4029,6 +4041,22 @@ POSTS & CONTENT STYLES
 
 a.ls-l {
   top: 0 !important; }
+
+.homepage-callout {
+  background-color: #e6e6e6;
+  padding-top: 2rem; }
+  .homepage-callout h2 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 800; }
+  .homepage-callout h4 {
+    text-transform: none;
+    font-weight: 400;
+    color: #0a0a0a; }
+  .homepage-callout p {
+    color: #8a8a8a; }
+  .homepage-callout.lower-shadow::after {
+    margin-top: 1.5rem; }
 
 /*********************
 IMAGE GALLERY STYLES

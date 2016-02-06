@@ -13,7 +13,15 @@ Template Name: Home (Full Width, No Sidebar)
 				<?php layerslider(1) ?>
 			</div>
 		</div>
-	</div> <!-- end #feature -->	
+	</div> <!-- end #feature -->
+	
+	<?php if ( is_active_sidebar( 'homepage_callout' ) ) : ?>
+	<div class="homepage-callout lower-shadow">
+		<div class="row">
+			<?php dynamic_sidebar( 'homepage_callout' ); ?>
+		</div>
+	</div>
+	<?php endif; ?>
 
 	<div id="content">
 
