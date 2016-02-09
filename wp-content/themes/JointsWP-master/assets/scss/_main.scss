@@ -917,12 +917,17 @@ PLUGIN STYLES
 EVENTS CALENDAR STYLES
 *********************/
 
+#tribe-events-pg-template {
+	padding: 1rem 0rem;
+}
+
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
 	background: $primary-color;
 }
 
 h2.tribe-events-page-title {
 	color: $primary-color;
+	text-align: left;
 }
 
 .tribe-events-calendar {

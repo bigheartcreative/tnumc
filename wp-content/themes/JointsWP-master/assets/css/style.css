@@ -4311,11 +4311,15 @@ PLUGIN STYLES
 /*********************
 EVENTS CALENDAR STYLES
 *********************/
+#tribe-events-pg-template {
+  padding: 1rem 0rem; }
+
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
   background: #2e5f97; }
 
 h2.tribe-events-page-title {
-  color: #2e5f97; }
+  color: #2e5f97;
+  text-align: left; }
 
 .tribe-events-calendar thead th {
   background-color: #5493d0;
