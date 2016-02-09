@@ -4333,10 +4333,21 @@ h2.tribe-events-page-title {
   color: #2e5f97; }
 
 #tribe-events .tribe-events-button {
-  background: #5493d0; }
+  background: #5493d0;
+  font-size: 100%;
+  padding: 1.25rem;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: background .3s ease; }
+  #tribe-events .tribe-events-button:hover {
+    background: #2e5f97; }
 
 #tribe-events-content .tribe-events-tooltip h4 {
   color: #2e5f97; }
+
+/* SINGLE EVENTS */
+.tribe-events-schedule h2 {
+  font-size: 1.525rem; }
 
 /******************************************************************
 
