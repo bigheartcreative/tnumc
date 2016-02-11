@@ -4371,6 +4371,12 @@ h2.tribe-events-page-title {
 .tribe-events-schedule h2 {
   font-size: 1.525rem; }
 
+/*****************************
+SHARIFY STYLES (Social Icons)
+*****************************/
+.sharify-container li {
+  float: right; }
+
 /******************************************************************
 
 Stylesheet: Retina Screens & Devices Stylesheet
