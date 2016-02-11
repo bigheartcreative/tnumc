@@ -23,6 +23,7 @@ wp-app.php
 wp-blog-header.php
 wp-comments-post.php
 wp-config-sample.php
+wp-config_bk.php
 wp-config.php
 wp-cron.php
 wp-links-opml.php
