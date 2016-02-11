@@ -4059,6 +4059,28 @@ a.ls-l {
   .homepage-callout.lower-shadow::after {
     margin-top: 1.5rem; }
 
+a.homepage-image-callout {
+  display: block;
+  padding-bottom: 0; }
+  a.homepage-image-callout img {
+    width: 100%; }
+
+.homepage-feature-posts p {
+  line-height: 1.5;
+  margin-bottom: 0; }
+
+.homepage-feature-posts h5 {
+  text-transform: capitalize;
+  margin-bottom: 0;
+  font-size: 1.1rem; }
+
+.homepage-feature-posts img {
+  display: block;
+  border: 1px solid #cacaca; }
+
+.homepage-feature-posts .item {
+  margin-bottom: 1.5rem; }
+
 /*********************
 IMAGE GALLERY STYLES
 *********************/
@@ -4226,7 +4248,7 @@ FOOTER STYLES
   .footer span {
     text-transform: none; }
   .footer div {
-    margin-top: 3rem; }
+    padding-top: 1rem; }
 
 /*********************
 FOUNDATION STYLES

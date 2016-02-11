@@ -7,7 +7,7 @@ function joints_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Default thumbnail size
-	set_post_thumbnail_size(125, 125, true);
+	set_post_thumbnail_size(300, 300, true);
 
 	// Add RSS Support
 	add_theme_support( 'automatic-feed-links' );
@@ -60,4 +60,44 @@ function background_featured_image() {
 add_action( 'after_setup_theme', 'tnumc_bg_image_mobile' );
 function tnumc_bg_image_mobile() {
     add_image_size( 'mobile-bg', 640, 600, array( 'center', 'top' ) ); // Hard crop center top
+}
+
+function home_feature_list() {
+	$args = array(
+		'tag' => 'home-feature',
+		'posts_per_page' => 4,
+		'orderby' => 'date',
+		'order'   => 'DESC'
+	);
+
+
+	$feature_posts = new WP_Query( $args );
+		
+	if ( $feature_posts->have_posts() ) {
+
+		while ( $feature_posts->have_posts() ) {
+			$feature_posts->the_post();
+						
+			echo '<div class="item row">';
+			echo '<div class="small-3 columns">';
+
+			echo '<a class="feature-thumb" href="' . get_permalink() . '">';
+			if ( has_post_thumbnail() ) {
+				echo get_the_post_thumbnail( $feature_posts->ID, 'thumbnail' );
+			} else {
+				echo '<img src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" />';
+			}
+			echo '</a>';
+			
+			echo '</div><div class="small-9 columns"><h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
+			echo the_excerpt();
+			echo '</div></div>';
+		}
+		
+	} else {
+		echo _e( 'Sorry, no featured posts were found.', 'jointswp' );
+	}
+		
+	/* Restore original Post Data */
+	wp_reset_postdata();
 }

@@ -423,6 +423,43 @@ a {
 	
 }
 
+a {
+	
+	&.homepage-image-callout {
+		display: block;
+		padding-bottom: 0;
+	
+		img {
+			width: 100%;
+		}
+	}
+}
+
+// Homepage 4-up feature posts
+
+.homepage-feature-posts {
+	p {
+		line-height: 1.5;
+		margin-bottom: 0;
+	}
+	
+	h5 {
+		text-transform: capitalize;
+		margin-bottom: 0;
+		font-size: 1.1rem;
+	}
+	
+	img {
+		display: block;
+		border: 1px solid $medium-gray;
+	}
+	
+	.item {
+		margin-bottom: 1.5rem;
+	}
+}
+
+
 
 /*********************
 IMAGE GALLERY STYLES
@@ -795,7 +832,7 @@ FOOTER STYLES
 	}
 
 	div {
-		margin-top: $global-margin * 3;
+		padding-top: $global-margin;
 	}
 }
 
