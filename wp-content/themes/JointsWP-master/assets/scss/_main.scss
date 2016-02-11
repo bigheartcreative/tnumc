@@ -954,12 +954,17 @@ PLUGIN STYLES
 EVENTS CALENDAR STYLES
 *********************/
 
+#tribe-events-pg-template {
+	padding: 1rem 0rem;
+}
+
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
 	background: $primary-color;
 }
 
 h2.tribe-events-page-title {
 	color: $primary-color;
+	text-align: left;
 }
 
 .tribe-events-calendar {
@@ -983,6 +988,19 @@ h2.tribe-events-page-title {
 
 #tribe-events .tribe-events-button  {
 	background: $light-blue-color;
+	font-size: $global-font-size;
+	padding: 1.25rem;
+    text-transform: none;
+    letter-spacing: 0;
+    -webkit-transition: background .3s ease;
+	-moz-transition: background .3s ease;
+	-ms-transition: background .3s ease;
+	-o-transition: background .3s ease;
+	transition: background .3s ease;
+
+    &:hover {
+    	background: $primary-color;
+    }
 }
 
 #tribe-events-content {
@@ -991,4 +1009,10 @@ h2.tribe-events-page-title {
 			color: $primary-color;
 		}
 	}
+}
+
+	/* SINGLE EVENTS */
+
+.tribe-events-schedule h2 {
+	font-size: 1.525rem;
 }
