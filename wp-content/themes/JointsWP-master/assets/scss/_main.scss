@@ -1019,9 +1019,11 @@ h2.tribe-events-page-title {
 
 
 /*****************************
-SHARIFY STYLES (Social Icons)
+SOCIAL SHARING ICONS
 *****************************/
 
-.sharify-container li {
-	float: right;
+.twitter-share,
+.fb-share {
+	float: right !important;
+	width: 10% !important;
 }

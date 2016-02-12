@@ -10,6 +10,7 @@
     <section class="entry-content" itemprop="articleBody">
 		<?php the_post_thumbnail('full'); ?>
 		<?php the_content(); ?>
+		<!-- <?php async_social_display(); ?> --> <!-- This is turned on in the plugin settings in the Admin area) -->
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
