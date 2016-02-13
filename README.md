@@ -9,3 +9,4 @@ External Plugins recommended with build:
 - wordfence
 - wp-migrate-db
 - wp-super-cache
+- Async Sharing Options
