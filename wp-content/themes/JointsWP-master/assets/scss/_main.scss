@@ -223,7 +223,11 @@ POSTS & CONTENT STYLES
 }
 
 .archive-title {
+	margin-bottom: ($global-margin * 3);
+}
 
+.search-result {
+	font-size: 2rem;
 }
 
 
@@ -781,6 +785,8 @@ SIDEBARS & ASIDES
 		}
 	}
 }
+
+
 /*********************
 FOOTER STYLES
 *********************/
