@@ -10,3 +10,4 @@ External Plugins recommended with build:
 - wp-migrate-db
 - wp-super-cache
 - Async Sharing Options
+- Disqus Commenting System
