@@ -72,7 +72,10 @@ function home_feature_list() {
 
 
 	$feature_posts = new WP_Query( $args );
-		
+	
+	// Start output buffer
+	ob_start();
+				
 	if ( $feature_posts->have_posts() ) {
 
 		while ( $feature_posts->have_posts() ) {
@@ -97,7 +100,23 @@ function home_feature_list() {
 	} else {
 		echo _e( 'Sorry, no featured posts were found.', 'jointswp' );
 	}
+
+	// Collect output
+	$feature_string = ob_get_contents();
+		
+	// End & return result string
+	ob_end_clean();
+	return $feature_string;
 		
 	/* Restore original Post Data */
 	wp_reset_postdata();
 }
+add_shortcode('home-feature', 'home_feature_list' );
+
+
+//Clean up the excerpt length to 20 words; format updated in functions/cleanup.php
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+

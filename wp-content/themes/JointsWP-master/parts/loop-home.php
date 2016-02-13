@@ -3,8 +3,7 @@
     <section class="entry-content" itemprop="articleBody">
     
 		<div class="row">
-			<div class="homepage-feature-posts medium-6 columns"><?php home_feature_list(); ?></div>
-			<div class="medium-6 columns"><?php the_content(); ?></div>
+			<?php the_content('',FALSE,''); ?>
 		</div>
 
 	    <?php wp_link_pages(); ?>
@@ -14,6 +13,6 @@
 		
 	</footer> <!-- end article footer -->
 						    
-	<?php comments_template(); ?>
+	<?php // comments_template(); ?>
 					
 </article> <!-- end article -->
