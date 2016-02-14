@@ -14,6 +14,22 @@ GENERAL STYLES
 	fill: currentColor;
 }
 
+img {
+	.homepage-feature-posts & {
+		display: block;
+		border: 1px solid $medium-gray;		
+	}
+	
+	.entry-content & {
+		display: block;
+		border: 1px solid $medium-gray;		
+	}
+}
+
+.gray {
+	color: $dark-gray;
+}
+
 /*********************
 LINK STYLES
 *********************/
@@ -48,12 +64,23 @@ h1, .h1 {
 		font-weight: $global-weight-bold;
 		text-transform: capitalize;
 	}
+	
+	&.secondary-header {
+		color: $white;
+		text-transform: capitalize;
+	}
 }
 
 h2, .h2 {
 	.ls-slide & {
 		font-weight: $global-weight-bold;
 		text-transform: capitalize;		
+	}
+	
+	.homepage-callout & {
+		text-transform: capitalize;
+		font-size: 2rem;
+		font-weight: 800;
 	}
 }
 
@@ -62,16 +89,36 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	
+	.homepage-callout & {
+		text-transform: none;
+		font-weight: 400;
+		color: $black;
+	}
 }
 
 h5, .h5 {
 	margin-bottom: $header-margin-bottom * 4;
-
+	
+	.homepage-feature-posts & {
+		text-transform: capitalize;
+		margin-bottom: 0;
+		font-size: 1.1rem;
+	}
+	
+	.entry-content & {
+		color: $black;
+		margin-bottom: 1.5rem;
+	}	
 }
 
 h6, .h6 {
-
+	font-size: 1.1rem;
+	
+	.entry-content & {
+		color: $black;
+		margin-bottom: 0;
+		text-transform: capitalize;
+	}
 }
 
 p {
@@ -79,6 +126,11 @@ p {
 		line-height: $global-lineheight !important;
 		font-size: $global-font-size * 1.25;
 		color: $white;
+	}
+	
+	.entry-content & {
+		font-size: 0.875rem;
+		line-height: 1.8;
 	}
 }
 
@@ -226,6 +278,10 @@ POSTS & CONTENT STYLES
 
 }
 
+.pad-bottom {
+	padding-bottom: 2rem;
+}
+
 
 // Breadcrumbs
 #crumbs {
@@ -255,15 +311,14 @@ POSTS & CONTENT STYLES
 // Entry content  
 .entry-content {
 	margin-bottom: 3rem;
-	
-	& p {
-		font-size: 0.875rem;
-		line-height: 2;
-	}
 
 	img {
 		max-width: 100%;
 		height: auto;
+	}
+	
+	span {
+		font-size: 0.875rem;
 	}
 
 	.alignleft, img.alignleft { 
@@ -293,6 +348,11 @@ POSTS & CONTENT STYLES
 		border: 1px solid #cecece;
 		padding: 10px;
 		}
+	
+	li {
+		line-height: 1.8rem;
+		font-size: 0.875rem;
+	}
 
 
 	// Blockquotes
@@ -360,7 +420,6 @@ POSTS & CONTENT STYLES
 
 // Homepage & sub-page full-width backgrounds
 .responsive-background {
-	min-height: 40rem;
 	background-position: center top;
 	background-repeat: no-repeat;    
     position: relative;
@@ -369,23 +428,44 @@ POSTS & CONTENT STYLES
 	@include breakpoint(large) {
 		background-size: 100% auto;
 		margin: -14rem 0 0;
-		padding: 43% 0 2rem;
+		padding: 16rem 0 2rem;
+		min-height: 40rem;
 	}
 	@include breakpoint(medium only) {
 		background-size: 100% auto;
 		margin: -18rem 0 0;
-		padding: 43% 0 2rem;
+		padding: 19rem 0 2rem;
+		min-height: 30rem;
 	}
 	@include breakpoint(small only) {
 		background-size: cover;
 		padding: 8rem 0 1rem;
+		min-height: auto;
+	}
+
+
+	// Homepage slider styling
+	.slider-container {
+		background-color: rgba($black, 0.5);
+		
+		@include breakpoint(large) {
+			background-size: 100% auto;
+			margin: 17% 0 0;
+			padding: 0;
+		}
+		@include breakpoint(medium only) {
+			background-size: 100% auto;
+			margin: 7% 0 0;
+			padding: 0;
+		}
+		@include breakpoint(small only) {
+			background-size: cover;
+			padding: 8rem 0 1rem;
+		}
+	
 	}
 }
 
-// Homepage slider styling
-.slider-container {
-	background-color: rgba($black, 0.5);
-}
 
 .ls-preloaded {
 	white-space: normal !important;
@@ -403,16 +483,6 @@ a {
 	background-color: $light-gray;
 	padding-top:2rem;
 
-	h2 {
-		text-transform: capitalize;
-		font-size: 2rem;
-		font-weight: 800;
-	}
-	h4 {
-		text-transform: none;
-		font-weight: 400;
-		color: $black;
-	}
 	p {
 		color: $dark-gray;
 	}
@@ -442,18 +512,7 @@ a {
 		line-height: 1.5;
 		margin-bottom: 0;
 	}
-	
-	h5 {
-		text-transform: capitalize;
-		margin-bottom: 0;
-		font-size: 1.1rem;
-	}
-	
-	img {
-		display: block;
-		border: 1px solid $medium-gray;
-	}
-	
+			
 	.item {
 		margin-bottom: 1.5rem;
 	}

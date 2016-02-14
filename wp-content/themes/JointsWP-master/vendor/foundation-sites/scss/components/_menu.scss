@@ -221,6 +221,10 @@ $hover-border-top-width: 0.3rem;
 	    width: 20%;
     }
     
+    > li.current-menu-item {
+	    border-right: .1rem solid $white	;
+    }
+    
     > li:last-child {
 	    border-right: none;
     }

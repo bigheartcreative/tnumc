@@ -2910,6 +2910,9 @@ select {
   border-right: .1rem solid #579ada;
   width: 20%; }
 
+.medium-horizontal > li.current-menu-item {
+  border-right: 0.1rem solid #fefefe; }
+
 .medium-horizontal > li:last-child {
   border-right: none; }
 
@@ -3778,6 +3781,17 @@ GENERAL STYLES
   max-height: 100%;
   fill: currentColor; }
 
+.homepage-feature-posts img {
+  display: block;
+  border: 1px solid #cacaca; }
+
+.entry-content img {
+  display: block;
+  border: 1px solid #cacaca; }
+
+.gray {
+  color: #8a8a8a; }
+
 /*********************
 LINK STYLES
 *********************/
@@ -3798,17 +3812,49 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700;
   text-transform: capitalize; }
 
+h1.secondary-header, .h1.secondary-header {
+  color: #fefefe;
+  text-transform: capitalize; }
+
 .ls-slide h2, .ls-slide .h2 {
   font-weight: 700;
   text-transform: capitalize; }
 
+.homepage-callout h2, .homepage-callout .h2 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 800; }
+
+.homepage-callout h4, .homepage-callout .h4 {
+  text-transform: none;
+  font-weight: 400;
+  color: #0a0a0a; }
+
 h5, .h5 {
   margin-bottom: 2rem; }
+  .homepage-feature-posts h5, .homepage-feature-posts .h5 {
+    text-transform: capitalize;
+    margin-bottom: 0;
+    font-size: 1.1rem; }
+  .entry-content h5, .entry-content .h5 {
+    color: #0a0a0a;
+    margin-bottom: 1.5rem; }
+
+h6, .h6 {
+  font-size: 1.1rem; }
+  .entry-content h6, .entry-content .h6 {
+    color: #0a0a0a;
+    margin-bottom: 0;
+    text-transform: capitalize; }
 
 .ls-slide p {
   line-height: 1.5 !important;
   font-size: 125%;
   color: #fefefe; }
+
+.entry-content p {
+  font-size: 0.875rem;
+  line-height: 1.8; }
 
 /*********************
 HEADER STYLES
@@ -3907,6 +3953,9 @@ POSTS & CONTENT STYLES
   border: 0px;
   padding: 0px; }
 
+.pad-bottom {
+  padding-bottom: 2rem; }
+
 #crumbs {
   margin-bottom: 2em;
   font-size: .75em; }
@@ -3927,12 +3976,11 @@ POSTS & CONTENT STYLES
 
 .entry-content {
   margin-bottom: 3rem; }
-  .entry-content p {
-    font-size: 0.875rem;
-    line-height: 2; }
   .entry-content img {
     max-width: 100%;
     height: auto; }
+  .entry-content span {
+    font-size: 0.875rem; }
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
@@ -3953,6 +4001,9 @@ POSTS & CONTENT STYLES
     background: #eee;
     border: 1px solid #cecece;
     padding: 10px; }
+  .entry-content li {
+    line-height: 1.8rem;
+    font-size: 0.875rem; }
   .entry-content blockquote {
     margin: 0;
     padding: 1rem 2rem 0;
@@ -4014,7 +4065,6 @@ POSTS & CONTENT STYLES
     color: #fff; }
 
 .responsive-background {
-  min-height: 40rem;
   background-position: center top;
   background-repeat: no-repeat;
   position: relative;
@@ -4023,19 +4073,35 @@ POSTS & CONTENT STYLES
     .responsive-background {
       background-size: 100% auto;
       margin: -14rem 0 0;
-      padding: 43% 0 2rem; } }
+      padding: 16rem 0 2rem;
+      min-height: 40rem; } }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .responsive-background {
       background-size: 100% auto;
       margin: -18rem 0 0;
-      padding: 43% 0 2rem; } }
+      padding: 19rem 0 2rem;
+      min-height: 30rem; } }
   @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     .responsive-background {
       background-size: cover;
-      padding: 8rem 0 1rem; } }
-
-.slider-container {
-  background-color: rgba(10, 10, 10, 0.5); }
+      padding: 8rem 0 1rem;
+      min-height: auto; } }
+  .responsive-background .slider-container {
+    background-color: rgba(10, 10, 10, 0.5); }
+    @media screen and (min-width: 64em) {
+      .responsive-background .slider-container {
+        background-size: 100% auto;
+        margin: 17% 0 0;
+        padding: 0; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      .responsive-background .slider-container {
+        background-size: 100% auto;
+        margin: 7% 0 0;
+        padding: 0; } }
+    @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+      .responsive-background .slider-container {
+        background-size: cover;
+        padding: 8rem 0 1rem; } }
 
 .ls-preloaded {
   white-space: normal !important; }
@@ -4046,14 +4112,6 @@ a.ls-l {
 .homepage-callout {
   background-color: #e6e6e6;
   padding-top: 2rem; }
-  .homepage-callout h2 {
-    text-transform: capitalize;
-    font-size: 2rem;
-    font-weight: 800; }
-  .homepage-callout h4 {
-    text-transform: none;
-    font-weight: 400;
-    color: #0a0a0a; }
   .homepage-callout p {
     color: #8a8a8a; }
   .homepage-callout.lower-shadow::after {
@@ -4068,15 +4126,6 @@ a.homepage-image-callout {
 .homepage-feature-posts p {
   line-height: 1.5;
   margin-bottom: 0; }
-
-.homepage-feature-posts h5 {
-  text-transform: capitalize;
-  margin-bottom: 0;
-  font-size: 1.1rem; }
-
-.homepage-feature-posts img {
-  display: block;
-  border: 1px solid #cacaca; }
 
 .homepage-feature-posts .item {
   margin-bottom: 1.5rem; }

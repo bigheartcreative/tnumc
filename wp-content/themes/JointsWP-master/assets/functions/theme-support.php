@@ -62,6 +62,7 @@ function tnumc_bg_image_mobile() {
     add_image_size( 'mobile-bg', 640, 600, array( 'center', 'top' ) ); // Hard crop center top
 }
 
+//function and shortcode for list displayed on homepage; combines newest posts and events, by tag
 function home_feature_list() {
 	$args = array(
 		'tag' => 'home-feature',
@@ -92,7 +93,7 @@ function home_feature_list() {
 			}
 			echo '</a>';
 			
-			echo '</div><div class="small-9 columns"><h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
+			echo '</div><div class="small-9 columns"><h6 class="feature-list"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h6>';
 			echo the_excerpt();
 			echo '</div></div>';
 		}
@@ -114,9 +115,121 @@ function home_feature_list() {
 add_shortcode('home-feature', 'home_feature_list' );
 
 
+//function and shortcode for news list, by tag
+function news_feature_list() {
+	$args = array(
+		'tag' => 'news',
+		'posts_per_page' => 3,
+		'orderby' => 'date',
+		'order'   => 'DESC'
+	);
+
+
+	$feature_posts = new WP_Query( $args );
+	
+	// Start output buffer
+	ob_start();
+				
+	if ( $feature_posts->have_posts() ) {
+
+		while ( $feature_posts->have_posts() ) {
+			$feature_posts->the_post();
+						
+			echo '<div class="item row">';
+			echo '<div class="small-3 columns">';
+
+			echo '<a class="feature-thumb" href="' . get_permalink() . '">';
+			if ( has_post_thumbnail() ) {
+				echo get_the_post_thumbnail( $feature_posts->ID, 'thumbnail' );
+			} else {
+				echo '<img src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" />';
+			}
+			echo '</a>';
+			
+			echo '</div><div class="small-9 columns"><h6 class="feature-list"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h6>';
+			echo '<p><strong>' . get_the_date('M j, Y') . '</strong> - ';
+			echo get_the_excerpt() . '</p>';
+			echo '</div></div>';
+		}
+		
+	} else {
+		echo _e( 'Sorry, no news posts were found.', 'jointswp' );
+	}
+
+	// Collect output
+	$feature_string = ob_get_contents();
+		
+	// End & return result string
+	ob_end_clean();
+	return $feature_string;
+		
+	/* Restore original Post Data */
+	wp_reset_postdata();
+}
+add_shortcode('news-feature', 'news_feature_list' );
+
+//function and shortcode for resources list, by tag
+function resources_feature_list() {
+	$args = array(
+		'tag' => 'resources',
+		'posts_per_page' => 3,
+		'orderby' => 'date',
+		'order'   => 'DESC'
+	);
+
+
+	$feature_posts = new WP_Query( $args );
+	
+	// Start output buffer
+	ob_start();
+				
+	if ( $feature_posts->have_posts() ) {
+
+		while ( $feature_posts->have_posts() ) {
+			$feature_posts->the_post();
+						
+			echo '<div class="item row">';
+			echo '<div class="small-3 columns">';
+
+			echo '<a class="feature-thumb" href="' . get_permalink() . '">';
+			if ( has_post_thumbnail() ) {
+				echo get_the_post_thumbnail( $feature_posts->ID, 'thumbnail' );
+			} else {
+				echo '<img src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" />';
+			}
+			echo '</a>';
+			
+			echo '</div><div class="small-9 columns"><h6 class="feature-list"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h6>';
+			echo the_excerpt();
+			echo '</div></div>';
+		}
+		
+	} else {
+		echo _e( 'Sorry, no resource posts were found.', 'jointswp' );
+	}
+
+	// Collect output
+	$feature_string = ob_get_contents();
+		
+	// End & return result string
+	ob_end_clean();
+	return $feature_string;
+		
+	/* Restore original Post Data */
+	wp_reset_postdata();
+}
+add_shortcode('resources-feature', 'resources_feature_list' );
+
+
 //Clean up the excerpt length to 20 words; format updated in functions/cleanup.php
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+	if ( is_search() ) {
+		$length = 50;
+	} else {
+		$length = 20;
+	}	
+	
+	return $length;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
