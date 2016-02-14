@@ -4267,79 +4267,20 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-.eNewsletter .gform_body ul {
-  list-style: none outside none;
-  margin: 0; }
-
-.eNewsletter h3.gform_title,
-.eNewsletter .gfield_label,
-.eNewsletter .name_first label,
-.eNewsletter .name_last label {
+#eNewsletter .gform_heading,
+#eNewsletter .gform_title,
+#eNewsletter .gfield_label,
+#eNewsletter .name_first label,
+#eNewsletter .name_last label {
   display: none; }
 
-.eNewsletter div#gform_wrapper_1 {
-  margin-top: -15px; }
+#eNewsletter div#gform_wrapper_1,
+#eNewsletter .gform_body,
+#eNewsletter .ginput_container {
+  padding-top: 0; }
 
-.eNewsletter .ginput_container.ginput_container_email {
-  margin-top: 0; }
-
-.eNewsletter .gform_footer.top_label {
-  text-align: center; }
-
-.layLeader__form .gfield {
-  margin-bottom: 1rem; }
-
-.layLeader__form .gform_body ul {
-  list-style: none outside none;
+#eNewsletter .gform_fields {
   margin: 0; }
-
-.layLeader__form h3.gform_title,
-.layLeader__form .name_first label,
-.layLeader__form #input_2_10 label {
-  display: none; }
-
-.layLeader__form .layLeader__elected,
-.layLeader__form .layLeader__favColor {
-  width: 30%; }
-
-.layLeader__form .address_city input,
-.layLeader__form .address_state select,
-.layLeader__form .address_zip input {
-  float: left;
-  width: 30%; }
-
-.layLeader__form .address_state select {
-  margin: 0 5%; }
-
-.layLeader__form .layLeader__captcha {
-  margin: 3rem 0; }
-
-.layLeader__form #recaptcha_widget_div {
-  margin-top: 6rem; }
-
-.layLeader__form #recaptcha_area {
-  margin: 0 auto; }
-
-.layLeader__form .gform_footer.top_label {
-  text-align: center; }
-
-.form_download {
-  background: #e6e6e6;
-  text-align: center;
-  width: 18rem;
-  padding: 0.5rem;
-  position: absolute;
-  top: 65px;
-  left: 720px; }
-  .form_download .download_button {
-    background: #5493d0;
-    color: #fff;
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    transition: background .3s ease; }
-    .form_download .download_button:hover {
-      background: #2e5f97; }
 
 /*********************
 EVENTS CALENDAR STYLES
