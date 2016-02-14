@@ -12,7 +12,10 @@
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+					<div class="search-results">
+						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+						<?php the_excerpt(); ?>
+					</div>
 				    
 				<?php endwhile; ?>	
 

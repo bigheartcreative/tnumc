@@ -116,7 +116,13 @@ add_shortcode('home-feature', 'home_feature_list' );
 
 //Clean up the excerpt length to 20 words; format updated in functions/cleanup.php
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+	if ( is_search() ) {
+		$length = 50;
+	} else {
+		$length = 20;
+	}	
+	
+	return $length;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

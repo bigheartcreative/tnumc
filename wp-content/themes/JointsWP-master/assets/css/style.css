@@ -3910,6 +3910,14 @@ POSTS & CONTENT STYLES
 .archive-title {
   margin-bottom: 3rem; }
 
+.search-results {
+  margin-bottom: 2rem; }
+  .search-results h2 {
+    font-size: 2rem; }
+  .search-results .excerpt-read-more {
+    display: block;
+    margin-top: 0.5rem; }
+
 #crumbs {
   margin-bottom: 2em;
   font-size: .75em; }

@@ -226,6 +226,19 @@ POSTS & CONTENT STYLES
 	margin-bottom: ($global-margin * 3);
 }
 
+.search-results {
+	margin-bottom: 2rem;
+
+	& h2 {
+		font-size: 2rem;
+	}
+
+	& .excerpt-read-more {
+		display: block;
+		margin-top: 0.5rem;
+	}
+}
+
 
 // Breadcrumbs
 #crumbs {

@@ -66,11 +66,22 @@ function joints_gallery_style($css) {
   return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
-// This removes the annoying […] to a Read More link
+// set excerpt action output based on whether or not we're on search page
+function excerpt_text() {
+	if ( is_search() ) {
+		$text = ' Read More &raquo;';
+	} else {
+		$text = ' ...';
+	}
+	
+	return $text;
+}
+//This function swaps in the correct text output depending on the page you are on
 function joints_excerpt_more($more) {
 	global $post;
+	
 	// edit here if you like
-return '<a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'jointswp') . get_the_title($post->ID).'">'. __(' ...', 'jointswp') .'</a>';
+return '<a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'jointswp') . get_the_title($post->ID).'">'. __(excerpt_text(), 'jointswp') .'</a>';
 }
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
