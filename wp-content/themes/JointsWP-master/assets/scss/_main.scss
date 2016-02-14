@@ -861,10 +861,6 @@ PLUGIN STYLES
 // Makes Gravity Forms play nice with Foundation Form styles
 
 #eNewsletter {
-// 	.gform_body ul {
-// 	    list-style: none outside none;
-// 	    margin: 0;
-// 	}
 
 	.gform_heading,
 	.gform_title,
@@ -873,11 +869,6 @@ PLUGIN STYLES
 	.name_last label {
 		display: none;
 	}
-
-	// .gform_body,
-	// div#gform_wrapper_1
-	// .ginput_container.ginput_container_email,
-	// div#input_1_1 
 	
 	div#gform_wrapper_1,
 	.gform_body,
@@ -889,87 +880,82 @@ PLUGIN STYLES
 		margin: 0;
 	}
 
-// 	.gform_footer.top_label {
-// 		text-align: center;
-// 	}
-// }
+
+.layLeader__form {
+	& .gfield {
+		margin-bottom: 1rem;
+	}
+
+	.gform_body ul {
+	    list-style: none outside none;
+	    margin: 0;
+	}
+
+	h3.gform_title,
+	.name_first label,
+	#input_2_10 label  {
+		display: none;
+	}
+
+	& .layLeader__elected,
+	& .layLeader__favColor {
+		width: 30%;
+	}
+
+	.address_city input,
+	.address_state select,
+	.address_zip input {
+		float: left;
+		width: 30%;
+	}
+
+	.address_state select {
+		margin: 0 5%;
+	}
+
+	& .layLeader__captcha {
+		margin: 3rem 0;
+	}
+
+	& #recaptcha_widget_div {
+		margin-top: 6rem;
+	}
+
+	& #recaptcha_area {
+		margin: 0 auto;
+	}
+
+	& .gform_footer.top_label {
+		text-align: center;
+	}
+}
+
+.form_download {
+    background: $light-gray;
+    text-align: center;
+    width: 18rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: 65px;
+    left: 720px;
 
 
-// .layLeader__form {
-// 	& .gfield {
-// 		margin-bottom: 1rem;
-// 	}
+    & .download_button {
+    	background: $light-blue-color;
+    	color: #fff;
+    	font-size: 1.25rem;
+    	padding: 0.5rem;
+    	border-radius: 0.5rem;
+    	-webkit-transition: background .3s ease;
+    	-moz-transition: background .3s ease;
+    	-ms-transition: background .3s ease;
+    	-o-transition: background .3s ease;
+    	transition: background .3s ease;
 
-// 	.gform_body ul {
-// 	    list-style: none outside none;
-// 	    margin: 0;
-// 	}
-
-// 	h3.gform_title,
-// 	.name_first label,
-// 	#input_2_10 label  {
-// 		display: none;
-// 	}
-
-// 	& .layLeader__elected,
-// 	& .layLeader__favColor {
-// 		width: 30%;
-// 	}
-
-// 	.address_city input,
-// 	.address_state select,
-// 	.address_zip input {
-// 		float: left;
-// 		width: 30%;
-// 	}
-
-// 	.address_state select {
-// 		margin: 0 5%;
-// 	}
-
-// 	& .layLeader__captcha {
-// 		margin: 3rem 0;
-// 	}
-
-// 	& #recaptcha_widget_div {
-// 		margin-top: 6rem;
-// 	}
-
-// 	& #recaptcha_area {
-// 		margin: 0 auto;
-// 	}
-
-// 	& .gform_footer.top_label {
-// 		text-align: center;
-// 	}
-// }
-
-// .form_download {
-//     background: $light-gray;
-//     text-align: center;
-//     width: 18rem;
-//     padding: 0.5rem;
-//     position: absolute;
-//     top: 65px;
-//     left: 720px;
-
-
-//     & .download_button {
-//     	background: $light-blue-color;
-//     	color: #fff;
-//     	font-size: 1.25rem;
-//     	padding: 0.5rem;
-//     	border-radius: 0.5rem;
-//     	-webkit-transition: background .3s ease;
-//     	-moz-transition: background .3s ease;
-//     	-ms-transition: background .3s ease;
-//     	-o-transition: background .3s ease;
-//     	transition: background .3s ease;
-
-//     	&:hover {
-//     		background: $primary-color;
-//     	}
-//     }
+    	&:hover {
+    		background: $primary-color;
+    	}
+    }
 }
 
 
