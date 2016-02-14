@@ -14,6 +14,7 @@ wp-config.php
 */index.php
 *.log
 wp-content/plugins/
+wp-content/uploads/
 wp-content/cache/
 wp-content/backups/
 **/node_modules/
