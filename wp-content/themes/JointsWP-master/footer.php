@@ -1,6 +1,6 @@
 					<footer class="footer" role="contentinfo">
 						<div id="inner-footer" class="row">
-							<div class="small-9 medium-4 columns" id="contactInfo">
+							<div class="small-9 medium-3 columns" id="contactInfo">
 								<h5>Contact Us</h5>
 								<p>304 S. Perimeter Park Drive</p>
 								<p>Nashville, TN 37211</p>
@@ -9,7 +9,7 @@
 								<p><a href="#" id="hoursDirections">Hours &amp; Directions</a></p>
 								<p><a href="#" id="privacyPolicy">Privacy Policy</a></p>
 		    				</div>
-		    				<div class="small-9 medium-4 columns" id="eNewsletter">
+		    				<div class="small-9 medium-4 medium-offset-1 columns" id="eNewsletter">
 		    					<h5><span>e-</span>Newsletter Subscription</h5>
 								<?php gravity_form(1, true, true, false, '', false); ?>
 
@@ -20,7 +20,7 @@
 									<button type="submit">Submit</button>
 								</form> -->
 		    				</div>
-		    				<div class="small-9 medium-4 columns" id="connect">
+		    				<div class="small-9 medium-3 medium-offset-1 columns" id="connect">
 								<h5>Connect With Us</h5>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="Facebook"></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="Twitter"></a>
