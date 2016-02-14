@@ -66,8 +66,6 @@ function joints_gallery_style($css) {
   return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
-
-
 // set excerpt action output based on whether or not we're on search page
 function excerpt_text() {
 	if ( is_search() ) {

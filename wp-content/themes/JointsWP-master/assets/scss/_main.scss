@@ -275,7 +275,20 @@ POSTS & CONTENT STYLES
 }
 
 .archive-title {
+	margin-bottom: ($global-margin * 3);
+}
 
+.search-results {
+	margin-bottom: 2rem;
+
+	& h2 {
+		font-size: 2rem;
+	}
+
+	& .excerpt-read-more {
+		display: block;
+		margin-top: 0.5rem;
+	}
 }
 
 .pad-bottom {
@@ -840,6 +853,8 @@ SIDEBARS & ASIDES
 		}
 	}
 }
+
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -904,31 +919,25 @@ PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
 
-.eNewsletter {
-	.gform_body ul {
-	    list-style: none outside none;
-	    margin: 0;
-	}
+#eNewsletter {
 
-	h3.gform_title,
+	.gform_heading,
+	.gform_title,
 	.gfield_label,
 	.name_first label,
 	.name_last label {
 		display: none;
 	}
-
-	div#gform_wrapper_1 {
-		margin-top: -15px;
+	
+	div#gform_wrapper_1,
+	.gform_body,
+	.ginput_container	{   
+		padding-top: 0;
 	}
 
-	.ginput_container.ginput_container_email {
-		margin-top: 0;
+	.gform_fields {
+		margin: 0;
 	}
-
-	.gform_footer.top_label {
-		text-align: center;
-	}
-}
 
 
 .layLeader__form {
