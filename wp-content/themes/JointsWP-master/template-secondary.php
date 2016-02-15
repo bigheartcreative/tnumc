@@ -1,17 +1,18 @@
 <?php
 /*
-Template Name: Secondary (2-column, hero image)
+Template Name: Secondary (hero image option, no sidebar)
 */
 ?>
 
 <?php get_header(); ?>
 			
-	
+	<?php if ( has_post_thumbnail() ) { ?>
 	<div id="feature" class="responsive-background" style="background-image:url(<?php background_featured_image(); ?>)">
 		<div class="column row">
 			<h1 class="secondary-header"><?php the_title(); ?></h1>
 		</div>
 	</div> <!-- end #feature -->
+	<? } ?>
 	
 	<div id="content">
 

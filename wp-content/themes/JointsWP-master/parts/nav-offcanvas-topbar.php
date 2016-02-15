@@ -33,7 +33,7 @@
 		</div>
 	</div>
 </div>
-<div class="logo-bar" id="logo-bar-menu">
+<div class="logo-bar <?php echo secondary_page_setting('opacity'); ?>" id="logo-bar-menu">
 	<div class="logo-row row align-middle">
 		<div class="medium-4 columns">
 			<a class="logo" href="<?php echo home_url(); ?>">

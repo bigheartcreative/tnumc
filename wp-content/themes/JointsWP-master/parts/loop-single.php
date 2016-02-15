@@ -1,3 +1,10 @@
+<?php
+/**
+ * Detect plugins.
+ */
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 	
 	<?php dimox_breadcrumbs(); ?>	
@@ -8,15 +15,27 @@
     </header> <!-- end article header -->
 					
     <section class="entry-content" itemprop="articleBody">
-		<?php the_post_thumbnail('full'); ?>
+		<?php // the_post_thumbnail('full'); ?>
 		<?php the_content(); ?>
-		<!-- <?php async_social_display(); ?> --> <!-- This is turned on in the plugin settings in the Admin area) -->
 	</section> <!-- end article section -->
 						
-	<footer class="article-footer">
-		<!-- Should categories go here instead of tags? -->
-		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>	</footer> <!-- end article footer -->
-									
-	<?php comments_template(); ?>	
+	<footer class="article-footer row">
+		<!-- This will be for both categories and tags -->
+		<div class="medium-9 columns">
+			<p class="tags">
+				<span class="tags-title"><?php _e( 'CATEGORIES: ', 'jointswp' ); ?></span><?php the_category(','); ?>&nbsp;&nbsp;
+				<?php the_tags('<span class="tags-title">' . __( 'TAGS:', 'jointswp' ) . '</span> ', ', ', ''); ?>
+			</p>
+		</div>
+		<div class="medium-3 columns">
+			<?php if ( is_plugin_active( 'async-social-sharing/async-share.php' ) ) {		
+				async_social_display();
+			} ?>
+		</div>
+	</footer> <!-- end article footer -->
+
+	<?php if ( is_plugin_active( 'disqus-comment-system/disqus.php' ) ) {		
+		comments_template();
+	} ?>
 													
 </article> <!-- end article -->

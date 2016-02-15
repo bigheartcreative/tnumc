@@ -57,6 +57,22 @@ function background_featured_image() {
 	}
 }
 
+//Set secondary page and homepage header opacity and size based on whether the Secondary page template is used and if a feature image is set
+function secondary_page_setting($arg) {
+	global $post;
+	$id = $post->ID;
+	$light = 'light';
+	$dark = 'dark';
+	
+	if ( $arg = 'opacity' ) {
+		if ( ( is_page_template('template-secondary.php') && has_post_thumbnail($id) ) || is_front_page() ) {
+			return $light;
+		} else {
+			return $dark;
+		}
+	}
+}
+
 add_action( 'after_setup_theme', 'tnumc_bg_image_mobile' );
 function tnumc_bg_image_mobile() {
     add_image_size( 'mobile-bg', 640, 600, array( 'center', 'top' ) ); // Hard crop center top
@@ -232,4 +248,7 @@ function wpdocs_custom_excerpt_length( $length ) {
 	return $length;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+//
 

@@ -30,6 +30,12 @@ img {
 	color: $dark-gray;
 }
 
+span {
+	&.tags-title {
+		color: $dark-gray;
+	}
+}
+
 /*********************
 LINK STYLES
 *********************/
@@ -60,6 +66,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
+	color: $black;
+	text-transform: capitalize;
+	
 	.ls-slide & {
 		font-weight: $global-weight-bold;
 		text-transform: capitalize;
@@ -68,6 +77,17 @@ h1, .h1 {
 	&.secondary-header {
 		color: $white;
 		text-transform: capitalize;
+	}
+	
+	.entry-content & {
+		color: $black;
+	}
+	
+	&.single-title {
+		color: $black;
+		font-size: 1.25rem;
+		margin: 1em 0;
+		text-transform: uppercase;
 	}
 }
 
@@ -131,6 +151,11 @@ p {
 	.entry-content & {
 		font-size: 0.875rem;
 		line-height: 1.8;
+	}
+	
+	&.tags {
+		margin-bottom: 0;
+		font-size: 0.875rem;
 	}
 }
 
@@ -209,6 +234,13 @@ NAVIGATION STYLES
 		max-width: 100%;
 		color: $black;
 	}
+	
+	&.light {
+		background-color: rgba(255,255,255, .7);
+	}
+	&.dark {
+		background-color: rgba(0,0,0, .15);
+	}
 }
 
 .dropdown-pane li {
@@ -259,12 +291,6 @@ POSTS & CONTENT STYLES
 	
 }
 
-.single-title {
-	color: $black;
-	font-size: 1.25rem;
-	margin-bottom: 1em;
-}
-
 .page-title {
 	
 	// Remove Foundation vcard styling from author page titles
@@ -298,7 +324,7 @@ POSTS & CONTENT STYLES
 
 // Breadcrumbs
 #crumbs {
-	margin-bottom: 2em;
+	margin-bottom: 0;
 	font-size: .75em;
 }
 
@@ -910,6 +936,12 @@ FOOTER STYLES
 	}
 }
 
+.article-footer {
+	padding:.5rem 0;
+	border-top:1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
+}
+
 /*********************
 FOUNDATION STYLES
 *********************/
@@ -1087,11 +1119,31 @@ h2.tribe-events-page-title {
 
 
 /*****************************
-SOCIAL SHARING ICONS
+SOCIAL SHARING ICONS & COMMENTING
 *****************************/
 
-.twitter-share,
+.twitter-share {
+	float: right !important;
+	width: 30% !important;
+	margin-left:5% !important;
+}
+
 .fb-share {
 	float: right !important;
-	width: 10% !important;
+	width: 65% !important;
+}
+
+.async-list {
+	text-align: right;
+}
+
+.async-wrapper {
+	padding-top:0 !important;
+	margin-bottom: 0 !important;
+	min-height: auto !important;
+	line-height: 1.5rem;
+}
+
+#disqus_thread {
+	padding-top: 3rem;
 }

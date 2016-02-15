@@ -65,6 +65,7 @@ $hover-border-top-width: 0.3rem;
 @mixin top-level-menu-hover {
 	background-color: $white;
 	border-top: $hover-border-top-width solid $red;
+	border-right: .1rem solid $white;
 	
 	a {
 		color: $primary-color;
@@ -222,7 +223,7 @@ $hover-border-top-width: 0.3rem;
     }
     
     > li.current-menu-item {
-	    border-right: .1rem solid $white	;
+	    border-right: .1rem solid $white;
     }
     
     > li:last-child {

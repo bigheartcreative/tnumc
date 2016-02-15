@@ -8,11 +8,14 @@
 
 	    <?php wp_link_pages(); ?>
 	</section> <!-- end article section -->
-						
+
+<!--No Article Footer			
 	<footer class="article-footer">
 		
-	</footer> <!-- end article footer -->
+	</footer> <!-- end article footer 
 						    
 	<?php // comments_template(); ?>
-					
+
+No Article Footer-->
+		
 </article> <!-- end article -->

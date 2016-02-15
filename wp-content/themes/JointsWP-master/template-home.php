@@ -1,7 +1,9 @@
 <?php
 /*
 Template Name: Home (Full Width, No Sidebar)
-*/
+Detect plugins.
+ */
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 ?>
 
 <?php get_header(); ?>
@@ -10,7 +12,11 @@ Template Name: Home (Full Width, No Sidebar)
 	<div id="feature" class="responsive-background" style="background-image:url(<?php background_featured_image(); ?>)">
 		<div class="slider-container">
 			<div class="column row">
-				<?php layerslider(1) ?>
+				
+				<?php if ( is_plugin_active( 'LayerSlider/layerslider.php' ) ) {		
+					layerslider(1);
+				} ?>
+
 			</div>
 		</div>
 	</div> <!-- end #feature -->
