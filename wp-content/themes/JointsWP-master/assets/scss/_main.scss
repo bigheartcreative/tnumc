@@ -954,6 +954,21 @@ PLUGIN STYLES
 	.gform_fields {
 		margin: 0;
 	}
+	
+	.name_first,
+	.name_last {
+		display: block !important;
+		width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.gform_wrapper .hidden_label input.large, 
+	.gform_wrapper .hidden_label select.large, 
+	.gform_wrapper .top_label input.large, 
+	.gform_wrapper .top_label select.large {
+		margin-top: -0.5rem;
+	}
 }
 
 .layLeader__form {
