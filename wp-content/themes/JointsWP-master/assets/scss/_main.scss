@@ -288,6 +288,7 @@ POSTS & CONTENT STYLES
 
 .single-title,
 .page-title {
+	margin-bottom: ($global-margin * 2);
 	
 }
 
@@ -309,6 +310,16 @@ POSTS & CONTENT STYLES
 	margin-bottom: ($global-margin * 2);
 }
 
+.search-result a {
+	color: $black;
+	font-size: 1.25rem;
+    margin-bottom: 1em;
+
+    &:hover {
+    	color: #2e5f97;
+    }
+}
+
 .search-results {
 	margin-bottom: 2rem;
 
@@ -317,11 +328,11 @@ POSTS & CONTENT STYLES
 		font-size: 1.25rem;
     	margin-bottom: 1em;
 	}
+}
 	
-	& .excerpt {
-		font-size: 0.875rem;
-    	line-height: 1.8;
-	}
+.excerpt {
+	font-size: 0.875rem;
+    line-height: 1.8;
 
 	& .post_info {
 		margin-bottom: 1rem;

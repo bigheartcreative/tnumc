@@ -3968,6 +3968,10 @@ POSTS & CONTENT STYLES
   height: 1rem;
   display: block; }
 
+.single-title,
+.page-title {
+  margin-bottom: 2rem; }
+
 .page-title .vcard {
   border: 0px;
   padding: 0px; }
@@ -3979,18 +3983,26 @@ POSTS & CONTENT STYLES
   font-size: 2rem;
   margin-bottom: 2rem; }
 
+.search-result a {
+  color: #0a0a0a;
+  font-size: 1.25rem;
+  margin-bottom: 1em; }
+  .search-result a:hover {
+    color: #2e5f97; }
+
 .search-results {
   margin-bottom: 2rem; }
   .search-results_title {
     color: #0a0a0a;
     font-size: 1.25rem;
     margin-bottom: 1em; }
-  .search-results .excerpt {
-    font-size: 0.875rem;
-    line-height: 1.8; }
-  .search-results .post_info {
+
+.excerpt {
+  font-size: 0.875rem;
+  line-height: 1.8; }
+  .excerpt .post_info {
     margin-bottom: 1rem; }
-  .search-results .excerpt-read-more {
+  .excerpt .excerpt-read-more {
     display: block;
     margin-top: 0.5rem; }
 

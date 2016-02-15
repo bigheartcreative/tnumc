@@ -5,8 +5,9 @@
 	</header> <!-- end article header -->
 					
 	<section class="entry-content" itemprop="articleBody">
-		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
-		<?php the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
+		<!-- <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a> -->
+		<?php the_excerpt(); ?>
+		
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
