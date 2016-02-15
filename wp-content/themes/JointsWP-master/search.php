@@ -5,15 +5,20 @@
 		<div id="inner-content" class="row">
 	
 			<main id="main" class="large-12 medium-12 columns first" role="main">
+
+				<?php dimox_breadcrumbs(); ?>
+
 				<header>
-					<h1 class="archive-title"><?php _e( 'Search Results for:', 'jointswp' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
+					<h1 class="archive-title"><?php _e( 'Search Results', 'jointswp' ); ?></h1>
+					<h2 class="search-query">You searched for: "<?php echo esc_attr(get_search_query()); ?>"</h2>
 				</header>
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
 					<div class="search-results">
-						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+						<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="search-results_title"><?php the_title(); ?></a></h3>
+						<?php get_template_part( 'parts/content', 'byline' ); ?>
 						<?php the_excerpt(); ?>
 					</div>
 				    

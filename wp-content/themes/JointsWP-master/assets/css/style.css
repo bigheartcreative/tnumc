@@ -3973,12 +3973,23 @@ POSTS & CONTENT STYLES
   padding: 0px; }
 
 .archive-title {
-  margin-bottom: 3rem; }
+  margin-bottom: 2rem; }
+
+.search-query {
+  font-size: 2rem;
+  margin-bottom: 2rem; }
 
 .search-results {
   margin-bottom: 2rem; }
-  .search-results h2 {
-    font-size: 2rem; }
+  .search-results_title {
+    color: #0a0a0a;
+    font-size: 1.25rem;
+    margin-bottom: 1em; }
+  .search-results .excerpt {
+    font-size: 0.875rem;
+    line-height: 1.8; }
+  .search-results .post_info {
+    margin-bottom: 1rem; }
   .search-results .excerpt-read-more {
     display: block;
     margin-top: 0.5rem; }
@@ -4354,6 +4365,19 @@ PLUGIN STYLES
 
 #eNewsletter .gform_fields {
   margin: 0; }
+
+#eNewsletter .name_first,
+#eNewsletter .name_last {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+#eNewsletter .gform_wrapper .hidden_label input.large,
+#eNewsletter .gform_wrapper .hidden_label select.large,
+#eNewsletter .gform_wrapper .top_label input.large,
+#eNewsletter .gform_wrapper .top_label select.large {
+  margin-top: -0.5rem; }
 
 .layLeader__form .gfield {
   margin-bottom: 1rem; }
