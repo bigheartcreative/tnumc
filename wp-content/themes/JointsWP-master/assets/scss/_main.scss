@@ -275,14 +275,30 @@ POSTS & CONTENT STYLES
 }
 
 .archive-title {
-	margin-bottom: ($global-margin * 3);
+	margin-bottom: ($global-margin * 2);
+}
+
+.search-query {
+	font-size: 2rem;
+	margin-bottom: ($global-margin * 2);
 }
 
 .search-results {
 	margin-bottom: 2rem;
 
-	& h2 {
-		font-size: 2rem;
+	&_title {
+		color: $black;
+		font-size: 1.25rem;
+    	margin-bottom: 1em;
+	}
+	
+	& .excerpt {
+		font-size: 0.875rem;
+    	line-height: 1.8;
+	}
+
+	& .post_info {
+		margin-bottom: 1rem;
 	}
 
 	& .excerpt-read-more {
@@ -937,6 +953,21 @@ PLUGIN STYLES
 
 	.gform_fields {
 		margin: 0;
+	}
+	
+	.name_first,
+	.name_last {
+		display: block !important;
+		width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.gform_wrapper .hidden_label input.large, 
+	.gform_wrapper .hidden_label select.large, 
+	.gform_wrapper .top_label input.large, 
+	.gform_wrapper .top_label select.large {
+		margin-top: -0.5rem;
 	}
 }
 

@@ -3954,12 +3954,23 @@ POSTS & CONTENT STYLES
   padding: 0px; }
 
 .archive-title {
-  margin-bottom: 3rem; }
+  margin-bottom: 2rem; }
+
+.search-query {
+  font-size: 2rem;
+  margin-bottom: 2rem; }
 
 .search-results {
   margin-bottom: 2rem; }
-  .search-results h2 {
-    font-size: 2rem; }
+  .search-results_title {
+    color: #0a0a0a;
+    font-size: 1.25rem;
+    margin-bottom: 1em; }
+  .search-results .excerpt {
+    font-size: 0.875rem;
+    line-height: 1.8; }
+  .search-results .post_info {
+    margin-bottom: 1rem; }
   .search-results .excerpt-read-more {
     display: block;
     margin-top: 0.5rem; }

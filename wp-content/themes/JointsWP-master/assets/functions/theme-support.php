@@ -221,6 +221,14 @@ function resources_feature_list() {
 add_shortcode('resources-feature', 'resources_feature_list' );
 
 
+//Add class name of "excerpt" to the_excerpt()
+function add_class_to_excerpt( $excerpt ) {
+    return str_replace('<p', '<p class="excerpt"', $excerpt);
+}
+
+add_filter( "the_excerpt", "add_class_to_excerpt" );
+
+
 //Clean up the excerpt length to 20 words; format updated in functions/cleanup.php
 function wpdocs_custom_excerpt_length( $length ) {
 	if ( is_search() ) {
