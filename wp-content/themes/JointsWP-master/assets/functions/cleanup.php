@@ -70,6 +70,8 @@ function joints_gallery_style($css) {
 function excerpt_text() {
 	if ( is_search() ) {
 		$text = ' Read More &raquo;';
+	} elseif ( is_archive() ) {
+		$text = ' Read More &raquo;';
 	} else {
 		$text = ' ...';
 	}

@@ -249,6 +249,8 @@ add_filter( "the_excerpt", "add_class_to_excerpt" );
 function wpdocs_custom_excerpt_length( $length ) {
 	if ( is_search() ) {
 		$length = 50;
+	} elseif ( is_archive() ) {
+		$length = 50;
 	} else {
 		$length = 20;
 	}	
