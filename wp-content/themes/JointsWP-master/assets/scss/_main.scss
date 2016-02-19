@@ -521,6 +521,15 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.ls-minimal .ls-bottom-nav-wrapper {
+text-align:right !important;
+margin:-3rem auto 0px !important;
+}
+
+.ls-minimal .ls-playvideo, .ls-minimal .ls-nav-sides, .ls-minimal .ls-bottom-slidebuttons a, .ls-minimal .ls-nav-prev, .ls-minimal .ls-nav-next, .ls-minimal .ls-nav-start, .ls-minimal .ls-nav-stop, .ls-minimal .ls-fullscreen, .ls-minimal .ls-loading-container {
+background-image: url('../images/skin.png') !important;
+}
+
 
 .ls-preloaded {
 	white-space: normal !important;

@@ -11,3 +11,4 @@ External Plugins recommended with build:
 - wp-super-cache
 - Async Sharing Options
 - Disqus Commenting System
+- Advanced Custom Fields (premium)

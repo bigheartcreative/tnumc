@@ -2,6 +2,9 @@
 // Theme support options
 require_once(get_template_directory().'/assets/functions/theme-support.php'); 
 
+// Advanced Cusom Theme integration
+require_once(get_template_directory().'/assets/functions/acf-integration.php'); 
+
 // WP Head and other cleanup functions
 require_once(get_template_directory().'/assets/functions/cleanup.php'); 
 
