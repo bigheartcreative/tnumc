@@ -1078,7 +1078,7 @@ PLUGIN STYLES
     width: 18rem;
     padding: 0.5rem;
     position: absolute;
-    top: 65px;
+    top: 10px;
     left: 720px;
 
 
@@ -1098,6 +1098,32 @@ PLUGIN STYLES
     		background: $primary-color;
     	}
     }
+}
+
+/*** Gravity forms error handling***/
+
+/* Make the error stand out */
+.gfield_error {
+	& input {
+		background-color: rgba(198, 15, 19, 0.1);
+		border-color: #c60f13;
+	/* Prepend the error message to the missing but required field */
+	&::after {
+		content: "Invalid entry";
+		display: block;
+	    padding: 0.5rem;
+	    margin-top: -17px;
+	    margin-bottom: 12px;
+	    background: #c60f13;
+	    color: #fff;
+	    font-size: 12px;
+	    font-weight: bold;
+	}
+}
+
+/* Hide the error message since we're displaying it above */
+.validation_error, .validation_message {
+	display:none;
 }
 
 
