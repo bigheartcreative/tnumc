@@ -13,7 +13,7 @@
     	<?php if ( $post->post_content!=="" ) { ?>
     	
 			<div class="row">
-				<div class="medium-6 columns pad-bottom">		
+				<div class="medium-12 columns pad-bottom">		
 					<?php the_content('',FALSE,''); ?>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 					
 				?>
 					<div class="row">
-						<div class="medium-6 columns pad-bottom">
+						<div class="medium-12 columns pad-bottom">
 							<?php echo $col_fw; ?>
 						</div>
 					</div>

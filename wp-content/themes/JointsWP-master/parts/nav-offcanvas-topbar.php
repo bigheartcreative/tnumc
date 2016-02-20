@@ -1,7 +1,7 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
 <div class="search-bar show-for-medium" id="search-header" data-toggler=".expanded">
-	<form role="search" method="get" class="search-form" action="">
+	<form role="search" method="get" class="search-form" action="<?php bloginfo('url'); ?>">
 		<div class="row input-group">
 			<input type="search"class="search-field input-group-field" placeholder="Search TNUMC.org" value="" name="s" title="Search for:" type="search">
 			<div class="input-group-button">
@@ -20,16 +20,16 @@
 			</a>
 			<a class="language float-right" data-toggle="lang-dropdown">English</a>
 			<ul class="dropdown-pane" id="lang-dropdown" data-dropdown data-hover="true">
-				<li><a>English</a></li>
-				<li><a>Korean</a></li>
-				<li><a>French</a></li>
-				<li><a>Portuguese</a></li>
-				<li><a>Spanish</a></li>
+				<li><a><?php _e( 'English', 'jointswp' ); ?></a></li>
+				<li><a><?php _e( 'Korean', 'jointswp' ); ?></a></li>
+				<li><a><?php _e( 'French', 'jointswp' ); ?></a></li>
+				<li><a><?php _e( 'Portuguese', 'jointswp' ); ?></a></li>
+				<li><a><?php _e( 'Spanish', 'jointswp' ); ?></a></li>
 			</ul>
-			<a class="first float-right">Staff</a>
-			<a class="float-right">Districts</a>
-			<a class="float-right">Bishop</a>
-			<a class="float-right">Churches</a>
+			<a class="first float-right"><?php _e( 'Staff', 'jointswp' ); ?></a>
+			<a class="float-right"><?php _e( 'Menu', 'Districts', 'jointswp' ); ?></a>
+			<a class="float-right"><?php _e( 'Menu', 'Bishop', 'jointswp' ); ?></a>
+			<a class="float-right"><?php _e( 'Menu', 'Churches', 'jointswp' ); ?></a>
 		</div>
 	</div>
 </div>
@@ -43,9 +43,9 @@
 			</a>
 		</div>
 		<div class="medium-8 columns text-right button-block show-for-medium">
-			<a class="light-blue button" href="#">About Us</a>
-			<a class="light-blue button" href="#">Communications</a>
-			<a class="light-blue button" href="#">Forms</a>
+			<a class="light-blue button" href="#"><?php _e( 'About Us', 'jointswp' ); ?></a>
+			<a class="light-blue button" href="#"><?php _e( 'Communications', 'jointswp' ); ?></a>
+			<a class="light-blue button" href="#"><?php _e( 'Forms', 'jointswp' ); ?></a>
 		</div>
 	</div>	
 	<div class="top-bar-right float-right show-for-small-only">

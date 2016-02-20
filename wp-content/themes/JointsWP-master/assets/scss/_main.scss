@@ -30,6 +30,10 @@ img {
 	color: $dark-gray;
 }
 
+.italic, .italics {
+	font-style: italic;
+}
+
 span {
 	&.tags-title {
 		color: $dark-gray;
@@ -927,33 +931,20 @@ FOOTER STYLES
 	#inner-footer {
 		border-top: $hr-border;
 
-		& #contactInfo p {
+		a:hover {
+			text-decoration: underline;
+		}
+
+
+		p {
 			font-size: 0.875rem;
 			line-height: .5;
 		
-			& #infoEmail {
-				font-style: italic;
-
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-
-			& #hoursDirections {
+			& .top-pad {
 				display: inline-block;
 				margin-top: 1rem;
-
-				&:hover {
-					text-decoration: underline;
-				}
 			}
 
-			& #privacyPolicy {
-
-				&:hover {
-					text-decoration: underline;
-				}
-			}
 		}
 
 		& #connect a {
