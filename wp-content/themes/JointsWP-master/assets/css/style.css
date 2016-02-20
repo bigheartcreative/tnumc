@@ -4370,6 +4370,68 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
+.ginput_container input,
+.name_first,
+.name_last {
+  max-width: 75%; }
+  @media screen and (min-width: 40em) {
+    .ginput_container input,
+    .name_first,
+    .name_last {
+      max-width: 50%; } }
+
+.ginput_container {
+  margin-bottom: 1rem; }
+  .ginput_container input {
+    margin-bottom: 0; }
+
+.gform_body ul {
+  list-style: none outside none;
+  margin: 0; }
+
+/***Set new width for specific fields***/
+.datepicker,
+.gfield_select {
+  max-width: 50%; }
+  @media screen and (min-width: 40em) {
+    .datepicker,
+    .gfield_select {
+      max-width: 30%; } }
+
+.address_city input,
+.address_state select,
+.address_zip input {
+  max-width: 50%; }
+  @media screen and (min-width: 40em) {
+    .address_city input,
+    .address_state select,
+    .address_zip input {
+      max-width: 30%; } }
+
+.form_download {
+  background: #e6e6e6;
+  text-align: center;
+  width: 18rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 10px;
+  left: 720px; }
+  .form_download .download_button {
+    background: #5493d0;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background .3s ease; }
+    .form_download .download_button:hover {
+      background: #2e5f97; }
+
+/*** Footer Gravity Forms***/
+#eNewsletter .ginput_container input,
+#eNewsletter .name_first,
+#eNewsletter .name_last {
+  max-width: 100%; }
+
 #eNewsletter .gform_heading,
 #eNewsletter .gform_title,
 #eNewsletter .gfield_label,
@@ -4385,73 +4447,33 @@ PLUGIN STYLES
 #eNewsletter .gform_fields {
   margin: 0; }
 
-#eNewsletter .name_first,
-#eNewsletter .name_last {
-  display: block !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important; }
-
 #eNewsletter .gform_wrapper .hidden_label input.large,
 #eNewsletter .gform_wrapper .hidden_label select.large,
 #eNewsletter .gform_wrapper .top_label input.large,
 #eNewsletter .gform_wrapper .top_label select.large {
   margin-top: -0.5rem; }
 
-.layLeader__form .gfield {
-  margin-bottom: 1rem; }
+/*** Gravity forms error handling***/
+/* Make the error stand out */
+.gfield_error input {
+  background-color: rgba(198, 15, 19, 0.1);
+  border-color: #c60f13;
+  /* Prepend the error message to the missing but required field */ }
 
-.layLeader__form .gform_body ul {
-  list-style: none outside none;
-  margin: 0; }
-
-.layLeader__form h3.gform_title,
-.layLeader__form .name_first label,
-.layLeader__form #input_2_10 label {
-  display: none; }
-
-.layLeader__form .layLeader__elected,
-.layLeader__form .layLeader__favColor {
-  width: 30%; }
-
-.layLeader__form .address_city input,
-.layLeader__form .address_state select,
-.layLeader__form .address_zip input {
-  float: left;
-  width: 30%; }
-
-.layLeader__form .address_state select {
-  margin: 0 5%; }
-
-.layLeader__form .layLeader__captcha {
-  margin: 3rem 0; }
-
-.layLeader__form #recaptcha_widget_div {
-  margin-top: 6rem; }
-
-.layLeader__form #recaptcha_area {
-  margin: 0 auto; }
-
-.layLeader__form .gform_footer.top_label {
-  text-align: center; }
-
-.form_download {
-  background: #e6e6e6;
-  text-align: center;
-  width: 18rem;
+.gfield_error::after {
+  content: "Invalid entry";
+  display: block;
   padding: 0.5rem;
-  position: absolute;
-  top: 65px;
-  left: 720px; }
-  .form_download .download_button {
-    background: #5493d0;
-    color: #fff;
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    transition: background .3s ease; }
-    .form_download .download_button:hover {
-      background: #2e5f97; }
+  margin-top: -17px;
+  margin-bottom: 12px;
+  background: #c60f13;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold; }
+
+/* Hide the error message since we're displaying it above */
+.validation_error, .validation_message {
+  display: none; }
 
 /*********************
 EVENTS CALENDAR STYLES

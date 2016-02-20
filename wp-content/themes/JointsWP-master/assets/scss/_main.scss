@@ -987,88 +987,46 @@ PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
 
-#eNewsletter {
-
-	.gform_heading,
-	.gform_title,
-	.gfield_label,
-	.name_first label,
-	.name_last label {
-		display: none;
-	}
-	
-	div#gform_wrapper_1,
-	.gform_body,
-	.ginput_container	{   
-		padding-top: 0;
-	}
-
-	.gform_fields {
-		margin: 0;
-	}
-	
-	.name_first,
-	.name_last {
-		display: block !important;
-		width: 100% !important;
-		margin: 0 !important;
-		padding: 0 !important;
-	}
-
-	.gform_wrapper .hidden_label input.large, 
-	.gform_wrapper .hidden_label select.large, 
-	.gform_wrapper .top_label input.large, 
-	.gform_wrapper .top_label select.large {
-		margin-top: -0.5rem;
+.ginput_container input,
+.name_first,
+.name_last {
+	max-width: 75%;
+	@include breakpoint(medium up) {
+		max-width: 50%;
 	}
 }
 
-.layLeader__form {
-	& .gfield {
-		margin-bottom: 1rem;
-	}
+.ginput_container {
+	margin-bottom: 1rem;
 
-	.gform_body ul {
-	    list-style: none outside none;
-	    margin: 0;
+	& input {
+		margin-bottom: 0;		
 	}
+}
 
-	h3.gform_title,
-	.name_first label,
-	#input_2_10 label  {
-		display: none;
+.gform_body ul {
+    list-style: none outside none;
+    margin: 0;
+}
+
+
+/***Set new width for specific fields***/
+.datepicker,
+.gfield_select {
+	max-width: 50%;
+
+	@include breakpoint(medium up) {
+		max-width: 30%
 	}
+}
 
-	& .layLeader__elected,
-	& .layLeader__favColor {
-		width: 30%;
-	}
+.address_city input,
+.address_state select,
+.address_zip input {
+	max-width: 50%;
 
-	.address_city input,
-	.address_state select,
-	.address_zip input {
-		float: left;
-		width: 30%;
-	}
-
-	.address_state select {
-		margin: 0 5%;
-	}
-
-	& .layLeader__captcha {
-		margin: 3rem 0;
-	}
-
-	& #recaptcha_widget_div {
-		margin-top: 6rem;
-	}
-
-	& #recaptcha_area {
-		margin: 0 auto;
-	}
-
-	& .gform_footer.top_label {
-		text-align: center;
+	@include breakpoint(medium up) {
+		max-width: 30%;
 	}
 }
 
@@ -1078,7 +1036,7 @@ PLUGIN STYLES
     width: 18rem;
     padding: 0.5rem;
     position: absolute;
-    top: 65px;
+    top: 10px;
     left: 720px;
 
 
@@ -1098,6 +1056,69 @@ PLUGIN STYLES
     		background: $primary-color;
     	}
     }
+}
+
+
+/*** Footer Gravity Forms***/
+#eNewsletter {
+
+	.ginput_container input,
+	.name_first,
+	.name_last {
+		max-width: 100%;
+	}
+
+	.gform_heading,
+	.gform_title,
+	.gfield_label,
+	.name_first label,
+	.name_last label {
+		display: none;
+	}
+	
+	div#gform_wrapper_1,
+	.gform_body,
+	.ginput_container	{   
+		padding-top: 0;
+	}
+
+	.gform_fields {
+		margin: 0;
+	}
+
+	.gform_wrapper .hidden_label input.large, 
+	.gform_wrapper .hidden_label select.large, 
+	.gform_wrapper .top_label input.large, 
+	.gform_wrapper .top_label select.large {
+		margin-top: -0.5rem;
+	}
+}
+
+/*** Gravity forms error handling***/
+
+/* Make the error stand out */
+.gfield_error {
+	& input {
+		background-color: rgba(198, 15, 19, 0.1);
+		border-color: #c60f13;
+	/* Prepend the error message to the missing but required field */
+	}
+	&::after {
+		content: "Invalid entry";
+		display: block;
+	    padding: 0.5rem;
+	    margin-top: -17px;
+	    margin-bottom: 12px;
+	    background: #c60f13;
+	    color: #fff;
+	    font-size: 12px;
+	    font-weight: bold;
+	}
+}
+
+/* Hide the error message since we're displaying it above */
+.validation_error, .validation_message {
+	display:none;
 }
 
 
