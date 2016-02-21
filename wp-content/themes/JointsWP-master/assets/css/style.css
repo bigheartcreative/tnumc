@@ -3781,6 +3781,7 @@ GENERAL STYLES
 *********************/
 .Icon {
   max-height: 100%;
+  max-width: 100%;
   fill: currentColor; }
 
 .homepage-feature-posts img {
@@ -3898,6 +3899,22 @@ HEADER STYLES
   .search-bar input[type='search'] {
     text-align: right; }
 
+.mobile-control-box {
+  background-color: #5493d0;
+  margin: .6rem 0;
+  float: right;
+  width: 100%; }
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+    .mobile-control-box .search-trigger {
+      height: 3rem;
+      width: 3rem;
+      padding: 1rem; } }
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+    .mobile-control-box .menu-trigger {
+      height: 3rem;
+      width: 3rem;
+      padding: .6rem; } }
+
 .search-bar.expanded {
   display: block; }
 
@@ -3932,6 +3949,10 @@ NAVIGATION STYLES
   max-height: 3.9rem;
   max-width: 100%;
   color: #0a0a0a; }
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .logo-bar .logo {
+    padding: 0; } }
 
 .logo-bar.light {
   background-color: rgba(255, 255, 255, 0.7); }
@@ -4140,6 +4161,7 @@ POSTS & CONTENT STYLES
   @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     .responsive-background {
       background-size: cover;
+      margin: -5rem 0 0;
       padding: 8rem 0 1rem;
       min-height: auto; } }
   .responsive-background .slider-container {

@@ -11,6 +11,7 @@ GENERAL STYLES
 
 .Icon {
 	max-height: 100%;
+	max-width: 100%;
 	fill: currentColor;
 }
 
@@ -194,9 +195,33 @@ HEADER STYLES
 	}
 }
 
+.mobile-control-box {
+	background-color: $light-blue-color;
+	margin:.6rem 0;
+    float: right;
+    width: 100%;
+	
+	.search-trigger {
+		@include breakpoint(small only) {
+			height: 3rem;
+			width: 3rem;
+			padding: 1rem;
+		}
+	}
+	
+	.menu-trigger {
+		@include breakpoint(small only) {
+			height: 3rem;
+			width: 3rem;
+			padding:.6rem;
+		}	
+	}
+}
+
 .search-bar.expanded {
 	display: block;
 }
+
     
 /*********************
 NAVIGATION STYLES
@@ -237,6 +262,12 @@ NAVIGATION STYLES
 		max-height: 3.9rem;
 		max-width: 100%;
 		color: $black;
+	}
+	
+	.logo {
+		@include breakpoint(small only) {
+			padding:0;
+		}
 	}
 	
 	&.light {
@@ -509,6 +540,7 @@ POSTS & CONTENT STYLES
 	}
 	@include breakpoint(small only) {
 		background-size: cover;
+		margin: -5rem 0 0;
 		padding: 8rem 0 1rem;
 		min-height: auto;
 	}

@@ -41,6 +41,7 @@
 		<div style="display:none">
 			<?php get_template_part( 'svg/inline', 'search.svg' ); ?>
 			<?php get_template_part( 'svg/inline', 'logo.svg' ); ?>
+			<?php get_template_part( 'svg/inline', 'menu.svg' ); ?>
 		</div>
 
 		<div class="off-canvas-wrapper">
