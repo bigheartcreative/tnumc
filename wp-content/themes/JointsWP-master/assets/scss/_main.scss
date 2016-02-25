@@ -232,10 +232,32 @@ NAVIGATION STYLES
 *********************/
 .goog-te-gadget-simple {
 	border: none !important;
-	line-height: 1.8rem !important;
+	line-height: 1.6rem !important;
 	padding:0 !important;
 	font-size: 1rem !important;
+	background-color: $primary-color !important;
+	
+	> img {
+		display: none;
+	}
+	
+	a {
+		&.goog-te-menu-value {
+			color: $white;
+			
+			> span {
+				color: $white !important;
+			}
+		}
+	}
+	
+	span {
+		vertical-align: auto !important;
+		
+	}
 }
+
+
 
 .top-bar {
 	.title-area {

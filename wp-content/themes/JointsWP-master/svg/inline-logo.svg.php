@@ -2,7 +2,7 @@
 	 viewBox="0 80 1200 240" enable-background="new 0 80 1200 240" xml:space="preserve">
 <g id="q23rYa.tif" display="none">
 	
-		<image display="inline" overflow="visible" enable-background="new    " width="747" height="144" id="Layer_0" xlink:href="91D7D6A7181100EB.png"  transform="matrix(1.6008 0 0 1.5918 0 85.213)">
+		<image display="inline" overflow="visible" enable-background="new" width="747" height="144" id="Layer_0" transform="matrix(1.6008 0 0 1.5918 0 85.213)">
 	</image>
 </g>
 <g>

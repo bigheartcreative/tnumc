@@ -3924,9 +3924,18 @@ NAVIGATION STYLES
 *********************/
 .goog-te-gadget-simple {
   border: none !important;
-  line-height: 1.8rem !important;
+  line-height: 1.6rem !important;
   padding: 0 !important;
-  font-size: 1rem !important; }
+  font-size: 1rem !important;
+  background-color: #2e5f97 !important; }
+  .goog-te-gadget-simple > img {
+    display: none; }
+  .goog-te-gadget-simple a.goog-te-menu-value {
+    color: #fefefe; }
+    .goog-te-gadget-simple a.goog-te-menu-value > span {
+      color: #fefefe !important; }
+  .goog-te-gadget-simple span {
+    vertical-align: auto !important; }
 
 .top-bar .title-area {
   z-index: 1; }
