@@ -65,11 +65,11 @@
 				<svg class="search-icon Icon">
 					<use xlink:href="#icon-search"></use>
 				</svg>
-			</a>			
+			</a>	
 			<ul class="menu float-right">
 				<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
 				<li><a class="menu-trigger" data-toggle="off-canvas">
-					<svg class="logo-menu Icon">
+					<svg class="menu-icon Icon">
 						<use xlink:href="#icon-menu"></use>
 					</svg>
 				</a></li>
