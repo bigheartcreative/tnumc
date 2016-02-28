@@ -4546,7 +4546,7 @@ PLUGIN STYLES
 EVENTS CALENDAR STYLES
 *********************/
 #tribe-events-pg-template {
-  padding: 1rem 0rem; }
+  padding: 1rem; }
 
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
   background: #2e5f97; }
@@ -4582,7 +4582,8 @@ h2.tribe-events-page-title {
   transition: background .3s ease; }
   @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     #tribe-events .tribe-events-button {
-      width: 50%; } }
+      width: 46%;
+      font-size: 0.9rem; } }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     #tribe-events .tribe-events-button {
       width: 30%; } }
@@ -4601,6 +4602,9 @@ h2.tribe-events-page-title {
   display: none; }
 
 /* SINGLE EVENTS */
+.tribe-events-single {
+  width: 100% !important; }
+
 .tribe-events-schedule h2 {
   font-size: 1.525rem; }
 
@@ -4608,9 +4612,13 @@ h2.tribe-events-page-title {
 SOCIAL SHARING ICONS & COMMENTING
 *****************************/
 .twitter-share {
-  float: right !important;
-  width: 30% !important;
-  margin-left: 5% !important; }
+  float: right !important; }
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+    .twitter-share {
+      width: 20% !important; } }
+  @media screen and (min-width: 40em) {
+    .twitter-share {
+      width: 10% !important; } }
 
 .fb-share {
   float: right !important;
