@@ -3782,7 +3782,8 @@ GENERAL STYLES
 .Icon {
   max-width: 100%;
   fill: currentColor;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: visible !important; }
 
 .homepage-feature-posts img {
   display: block;
@@ -3921,6 +3922,21 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+.goog-te-gadget-simple {
+  border: none !important;
+  line-height: 1.6rem !important;
+  padding: 0 !important;
+  font-size: 1rem !important;
+  background-color: #2e5f97 !important; }
+  .goog-te-gadget-simple > img {
+    display: none; }
+  .goog-te-gadget-simple a.goog-te-menu-value {
+    color: #fefefe; }
+    .goog-te-gadget-simple a.goog-te-menu-value > span {
+      color: #fefefe !important; }
+  .goog-te-gadget-simple span {
+    vertical-align: auto !important; }
+
 .top-bar .title-area {
   z-index: 1; }
 
@@ -3933,7 +3949,7 @@ NAVIGATION STYLES
   margin: 0 1rem 0 0; }
 
 .top-bar .language {
-  padding: 0.5rem 1rem 0; }
+  line-height: 2; }
 
 .search-icon {
   display: block;

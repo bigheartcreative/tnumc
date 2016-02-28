@@ -1,4 +1,9 @@
 jQuery(document).foundation();
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,fr,ko,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+
 /* 
 These functions make sure WordPress 
 and Foundation play nice together.
@@ -15,7 +20,3 @@ jQuery(document).ready(function() {
 	// Adds Flex Video to YouTube and Vimeo Embeds
 	jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').wrap("<div class='flex-video'/>");
 });
-
-/* 
-These functions initialize plugins
-*/

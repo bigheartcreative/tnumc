@@ -13,6 +13,7 @@ GENERAL STYLES
 	max-width: 100%;
 	fill: currentColor;
 	box-sizing: border-box;
+	overflow: visible !important;	
 }
 
 img {
@@ -229,6 +230,35 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+.goog-te-gadget-simple {
+	border: none !important;
+	line-height: 1.6rem !important;
+	padding:0 !important;
+	font-size: 1rem !important;
+	background-color: $primary-color !important;
+	
+	> img {
+		display: none;
+	}
+	
+	a {
+		&.goog-te-menu-value {
+			color: $white;
+			
+			> span {
+				color: $white !important;
+			}
+		}
+	}
+	
+	span {
+		vertical-align: auto !important;
+		
+	}
+}
+
+
+
 .top-bar {
 	.title-area {
 		z-index: 1;
@@ -245,7 +275,7 @@ NAVIGATION STYLES
 	}
 	
 	.language {
-		padding: 0.5rem 1rem 0;
+		line-height: 2;
 	}
 }
 
