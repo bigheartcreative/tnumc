@@ -4597,6 +4597,9 @@ h2.tribe-events-page-title {
 #tribe-events-content .tribe-events-tooltip h4 {
   color: #2e5f97; }
 
+#tribe-events-content .tribe-events-back {
+  display: none; }
+
 /* SINGLE EVENTS */
 .tribe-events-schedule h2 {
   font-size: 1.525rem; }

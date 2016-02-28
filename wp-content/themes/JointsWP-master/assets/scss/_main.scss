@@ -1320,6 +1320,9 @@ h2.tribe-events-page-title {
 			color: $primary-color;
 		}
 	}
+	& .tribe-events-back {
+		display: none;
+	}
 }
 
 	/* SINGLE EVENTS */
