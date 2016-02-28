@@ -1246,6 +1246,10 @@ EVENTS CALENDAR STYLES
 
 #tribe-events-pg-template {
 	padding: 1rem;
+
+	& .tribe-events {
+		margin-top: 1rem;
+	}
 }
 
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
