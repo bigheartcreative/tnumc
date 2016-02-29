@@ -226,6 +226,13 @@ HEADER STYLES
 	display: block;
 }
 
+// Fix wpadminbar bug for mobile
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+		position: fixed !important;
+	}
+}
+
     
 /*********************
 NAVIGATION STYLES
@@ -1180,10 +1187,24 @@ PLUGIN STYLES
 /*** Footer Gravity Forms***/
 #eNewsletter {
 
-	.ginput_container input,
-	.name_first,
-	.name_last {
-		max-width: 100%;
+
+	.ginput_container {
+		
+		margin-bottom: 0;
+		
+		input,
+		.name_first,
+		.name_last {
+			max-width: 100%;
+			width: 100%;
+			margin-bottom: .5rem;
+		}
+	}
+	
+	.ginput_container_name {
+		> span {
+			padding-right:0;
+		}
 	}
 
 	.gform_heading,

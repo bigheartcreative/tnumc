@@ -3919,6 +3919,10 @@ HEADER STYLES
 .search-bar.expanded {
   display: block; }
 
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed !important; } }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -4494,10 +4498,17 @@ PLUGIN STYLES
       background: #2e5f97; }
 
 /*** Footer Gravity Forms***/
-#eNewsletter .ginput_container input,
-#eNewsletter .name_first,
-#eNewsletter .name_last {
-  max-width: 100%; }
+#eNewsletter .ginput_container {
+  margin-bottom: 0; }
+  #eNewsletter .ginput_container input,
+  #eNewsletter .ginput_container .name_first,
+  #eNewsletter .ginput_container .name_last {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: .5rem; }
+
+#eNewsletter .ginput_container_name > span {
+  padding-right: 0; }
 
 #eNewsletter .gform_heading,
 #eNewsletter .gform_title,

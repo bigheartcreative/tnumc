@@ -80,15 +80,48 @@ function tnumc_bg_image_mobile() {
 
 //function and shortcode for list displayed on homepage; combines newest posts and events, by tag
 function home_feature_list() {
-	$args = array(
+	$today = date("Y-m-d");
+	
+	$args_for_events = array(
+        'post_type' => array('post','tribe_events'),
+		'meta_query' => array(
+			array(
+				'key' => '_EventStartDate',
+				'value' => $today,
+				'compare' => '>=',
+			)
+		),
 		'tag' => 'home-feature',
 		'posts_per_page' => 4,
 		'orderby' => 'date',
 		'order'   => 'DESC'
 	);
+	$events_query = new WP_Query( $args_for_events );
+	
+	$args_for_posts = array(
+        'post_type' => array('post'),
+		'tag' => 'home-feature',
+		'category_name' => 'news,program-resources',
+		'posts_per_page' => 4,
+		'orderby' => 'date',
+		'order'   => 'DESC'
+	);
+	$regular_posts_query = new WP_Query( $args_for_posts );
 
-
-	$feature_posts = new WP_Query( $args );
+	//create new empty query and populate it with the other two
+	$feature_posts = new WP_Query(  array('posts_per_page' => 4) );
+	$feature_posts->posts = array_merge( $events_query->posts, $regular_posts_query->posts );
+	
+	//limit count
+	$post_count = count( $feature_posts->posts );
+	$post_limit = 4;
+	
+	if ($post_count > $post_limit ) {
+		$feature_posts->post_count = $post_limit;
+	} else {
+		$feature_posts->post_count = $post_count;
+	}
+	 
 	
 	// Start output buffer
 	ob_start();
