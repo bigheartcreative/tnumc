@@ -1266,7 +1266,11 @@ EVENTS CALENDAR STYLES
 *********************/
 
 #tribe-events-pg-template {
-	padding: 1rem 0rem;
+	padding: 1rem;
+
+	& #tribe-events {
+		margin-top: 1rem;
+	}
 }
 
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
@@ -1318,7 +1322,8 @@ h2.tribe-events-page-title {
 	transition: background .3s ease;
 
 	@include breakpoint (small only) {
-		width: 50%;
+		width: 46%;
+		font-size: 0.9rem;
 	}
 
 	@include breakpoint (medium only) {
@@ -1331,7 +1336,6 @@ h2.tribe-events-page-title {
 }
 
 #tribe-events-content {
-
 	@include breakpoint(small and medium) {
 		margin: 0 auto;
 		width: 95%;
@@ -1341,9 +1345,16 @@ h2.tribe-events-page-title {
 			color: $primary-color;
 		}
 	}
+	& .tribe-events-back {
+		display: none;
+	}
 }
 
 	/* SINGLE EVENTS */
+
+.tribe-events-single {
+	width: 100% !important;
+}
 
 .tribe-events-schedule h2 {
 	font-size: 1.525rem;
@@ -1356,8 +1367,13 @@ SOCIAL SHARING ICONS & COMMENTING
 
 .twitter-share {
 	float: right !important;
-	width: 30% !important;
-	margin-left:5% !important;
+	@include breakpoint(small only) {
+		width: 20% !important;
+	} 
+	@include breakpoint(medium up) {
+		width: 10% !important;
+	} 
+	
 }
 
 .fb-share {
