@@ -1189,8 +1189,7 @@ PLUGIN STYLES
 
 
 	.ginput_container {
-		
-		margin-bottom: 0;
+		margin: 0 !important;
 		
 		input,
 		.name_first,
@@ -1231,6 +1230,11 @@ PLUGIN STYLES
 	.gform_wrapper .top_label select.large {
 		margin-top: -0.5rem;
 	}
+
+	.gform_wrapper li.gfield.gfield_error {
+		background-color: none !important;
+		border: none !important;
+	}
 }
 
 /*** Gravity forms error handling***/
@@ -1243,15 +1247,16 @@ PLUGIN STYLES
 	/* Prepend the error message to the missing but required field */
 	}
 	&::after {
-		content: "Invalid entry";
+		content: "Invalid entry" !important;
 		display: block;
-	    padding: 0.5rem;
-	    margin-top: -17px;
-	    margin-bottom: 12px;
+	    padding: 0.5rem !important;
+	    margin-top: -17px !important;
+	    margin-bottom: 12px !important;
 	    background: #c60f13;
 	    color: #fff;
 	    font-size: 12px;
 	    font-weight: bold;
+	    width: 97.5%;
 	}
 }
 
