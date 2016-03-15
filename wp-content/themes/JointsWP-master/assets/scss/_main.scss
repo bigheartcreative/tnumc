@@ -1072,7 +1072,7 @@ FOOTER STYLES
 
 		p {
 			font-size: 0.875rem;
-			line-height: .5;
+			margin-bottom: 0;
 		
 			& .top-pad {
 				display: inline-block;
@@ -1112,14 +1112,6 @@ PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
 
-.ginput_container input,
-.name_first,
-.name_last {
-	max-width: 75%;
-	@include breakpoint(medium up) {
-		max-width: 50%;
-	}
-}
 
 .ginput_container {
 	margin-bottom: 1rem;
@@ -1136,8 +1128,7 @@ PLUGIN STYLES
 
 
 /***Set new width for specific fields***/
-.datepicker,
-.gfield_select {
+.datepicker {
 	max-width: 50%;
 
 	@include breakpoint(medium up) {
@@ -1183,28 +1174,121 @@ PLUGIN STYLES
     }
 }
 
+/* Gravity Forms play nice with Foundation */
+.gform_wrapper {
 
-/*** Footer Gravity Forms***/
-#eNewsletter {
-
-
-	.ginput_container {
-		margin: 0 !important;
-		
-		input,
-		.name_first,
-		.name_last {
-			max-width: 100%;
-			width: 100%;
-			margin-bottom: .5rem;
+	li {
+		&.gfield, &.gfield_error {
+			margin: 0 0 1rem !important;
+			float: left;
+			
+			@include breakpoint(large) {
+				width: 75% !important;
+			}
+			
+			
+			@include breakpoint(medium only) {
+				width: 100% !important;
+			}
+			
+			@include breakpoint(small only) {
+				width: 100% !important;
+			}
 		}
+	}
+
+	input, select, textarea {
+		&.large, &.small {
+			width: 100% !important;
+		}
+	}
+
+	.gfield_error {
+		
+		.ginput_container {
+			margin: 0 !important;
+	
+			> input {
+				margin-bottom: 0 !important;
+			}
+		}
+	
+		& input {
+			background-color: rgba(198, 15, 19, 0.1);
+			border-color: #c60f13;
+		/* Prepend the error message to the missing but required field */
+		}
+		&::after {
+			content: "Invalid entry" !important;
+			display: block;
+		    padding: 0.5rem !important;
+		    margin-top: 0 !important;
+		    margin-bottom: 0 !important;
+		    background: #c60f13;
+		    color: #fff;
+		    font-size: 12px;
+		    font-weight: bold;
+		    width: 100;
+		}
+	}
+
+	.ginput_complex,
+	.ginput_container,
+	.ginput_container_name {
+	
+		> input[type=email], 
+		input[type=number], 
+		input[type=password], 
+		input[type=tel], 
+		input[type=text], 
+		input[type=url],
+		input.large {
+			width: 100% !important;
+			margin-bottom: 0 !important;
+		}
+	
 	}
 	
-	.ginput_container_name {
+	.ginput_container {
+	
+		max-width: 100% !important;
+		margin: 0 !important;
+
 		> span {
-			padding-right:0;
+			padding-top: 0 !important;
 		}
+	
 	}
+	
+		
+	.ginput_container_name {
+		
+		> span {
+			max-width: 100%;
+			width: 100% !important;
+			margin-bottom: 0;
+			padding-right: 0;
+			display: block;	
+			padding: 0 !important;
+			min-height: auto !important;
+			
+			&.name_first {
+				margin:0 0 1rem;
+			}
+		}
+		
+	}
+	
+	.gform_footer {
+	    padding: 0 0 .625em !important;
+	    margin: 0 !important;
+	    clear: both;
+	}
+	
+}	
+
+#eNewsletter {
+
 
 	.gform_heading,
 	.gform_title,
@@ -1224,41 +1308,20 @@ PLUGIN STYLES
 		margin: 0;
 	}
 
-	.gform_wrapper .hidden_label input.large, 
-	.gform_wrapper .hidden_label select.large, 
-	.gform_wrapper .top_label input.large, 
-	.gform_wrapper .top_label select.large {
-		margin-top: -0.5rem;
-	}
-
-	.gform_wrapper li.gfield.gfield_error {
-		background-color: none !important;
-		border: none !important;
-	}
-}
-
-/*** Gravity forms error handling***/
-
-/* Make the error stand out */
-.gfield_error {
-	& input {
-		background-color: rgba(198, 15, 19, 0.1);
-		border-color: #c60f13;
-	/* Prepend the error message to the missing but required field */
-	}
-	&::after {
-		content: "Invalid entry" !important;
-		display: block;
-	    padding: 0.5rem !important;
-	    margin-top: -17px !important;
-	    margin-bottom: 12px !important;
-	    background: #c60f13;
-	    color: #fff;
-	    font-size: 12px;
-	    font-weight: bold;
-	    width: 97.5%;
+	.gform_wrapper {
+		li.gfield.gfield_error {
+			background-color: none !important;
+			border: none !important;
+		}
+		
+		ul {
+			> li.gfield {
+				width: 100%;
+			}
+		}
 	}
 }
+
 
 /* Hide the error message since we're displaying it above */
 .validation_error, .validation_message {

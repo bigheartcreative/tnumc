@@ -1,6 +1,6 @@
 					<footer class="footer" role="contentinfo">
 						<div id="inner-footer" class="row">
-							<div class="small-9 medium-4 large-3 columns" id="contactInfo">
+							<div class="small-12 medium-4 large-3 columns" id="contactInfo">
 								<h5><?php _e( 'Contact Us', 'jointswp' ); ?></h5>
 								<p><?php _e( '304 S. Perimeter Park Drive', 'jointswp' ); ?></p>
 								<p><?php _e( 'Nashville, TN 37211', 'jointswp' ); ?></p>
@@ -10,7 +10,7 @@
 								<p><a href="#"><?php _e( 'Hours &amp; Directions', 'jointswp' ); ?></a></p>
 								<p><a href="#"><?php _e( 'Privacy Policy', 'jointswp' ); ?></a></p>
 		    				</div>
-		    				<div class="small-9 medium-4 large-4 large-offset-1 columns" id="eNewsletter">
+		    				<div class="small-12 medium-4 large-4 large-offset-1 columns" id="eNewsletter">
 		    					<h5><span>e-</span><?php _e( 'Newsletter Subscription', 'jointswp' ); ?></h5>
 								<?php gravity_form(1, true, true, false, '', false); ?>
 
@@ -21,7 +21,7 @@
 									<button type="submit">Submit</button>
 								</form> -->
 		    				</div>
-		    				<div class="small-9 medium-4 large-3 large-offset-1 columns" id="connect">
+		    				<div class="small-12 medium-4 large-3 large-offset-1 columns" id="connect">
 								<h5><?php _e( 'Connect With Us', 'jointswp' ); ?></h5>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="Facebook"></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="Twitter"></a>

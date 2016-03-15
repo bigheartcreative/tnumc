@@ -4419,7 +4419,7 @@ FOOTER STYLES
       text-decoration: underline; }
     .footer #inner-footer p {
       font-size: 0.875rem;
-      line-height: .5; }
+      margin-bottom: 0; }
       .footer #inner-footer p .top-pad {
         display: inline-block;
         margin-top: 1rem; }
@@ -4441,16 +4441,6 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-.ginput_container input,
-.name_first,
-.name_last {
-  max-width: 75%; }
-  @media screen and (min-width: 40em) {
-    .ginput_container input,
-    .name_first,
-    .name_last {
-      max-width: 50%; } }
-
 .ginput_container {
   margin-bottom: 1rem; }
   .ginput_container input {
@@ -4461,12 +4451,10 @@ PLUGIN STYLES
   margin: 0; }
 
 /***Set new width for specific fields***/
-.datepicker,
-.gfield_select {
+.datepicker {
   max-width: 50%; }
   @media screen and (min-width: 40em) {
-    .datepicker,
-    .gfield_select {
+    .datepicker {
       max-width: 30%; } }
 
 .address_city input,
@@ -4497,18 +4485,90 @@ PLUGIN STYLES
     .form_download .download_button:hover {
       background: #2e5f97; }
 
-/*** Footer Gravity Forms***/
-#eNewsletter .ginput_container {
-  margin: 0 !important; }
-  #eNewsletter .ginput_container input,
-  #eNewsletter .ginput_container .name_first,
-  #eNewsletter .ginput_container .name_last {
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: .5rem; }
+/* Gravity Forms play nice with Foundation */
+.gform_wrapper li.gfield, .gform_wrapper li.gfield_error {
+  margin: 0 0 1rem !important;
+  float: left; }
+  @media screen and (min-width: 64em) {
+    .gform_wrapper li.gfield, .gform_wrapper li.gfield_error {
+      width: 75% !important; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .gform_wrapper li.gfield, .gform_wrapper li.gfield_error {
+      width: 100% !important; } }
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+    .gform_wrapper li.gfield, .gform_wrapper li.gfield_error {
+      width: 100% !important; } }
 
-#eNewsletter .ginput_container_name > span {
-  padding-right: 0; }
+.gform_wrapper input.large, .gform_wrapper input.small, .gform_wrapper select.large, .gform_wrapper select.small, .gform_wrapper textarea.large, .gform_wrapper textarea.small {
+  width: 100% !important; }
+
+.gform_wrapper .gfield_error .ginput_container {
+  margin: 0 !important; }
+  .gform_wrapper .gfield_error .ginput_container > input {
+    margin-bottom: 0 !important; }
+
+.gform_wrapper .gfield_error input {
+  background-color: rgba(198, 15, 19, 0.1);
+  border-color: #c60f13;
+  /* Prepend the error message to the missing but required field */ }
+
+.gform_wrapper .gfield_error::after {
+  content: "Invalid entry" !important;
+  display: block;
+  padding: 0.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  background: #c60f13;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100; }
+
+.gform_wrapper .ginput_complex > input[type=email],
+.gform_wrapper .ginput_complex input[type=number],
+.gform_wrapper .ginput_complex input[type=password],
+.gform_wrapper .ginput_complex input[type=tel],
+.gform_wrapper .ginput_complex input[type=text],
+.gform_wrapper .ginput_complex input[type=url],
+.gform_wrapper .ginput_complex input.large,
+.gform_wrapper .ginput_container > input[type=email],
+.gform_wrapper .ginput_container input[type=number],
+.gform_wrapper .ginput_container input[type=password],
+.gform_wrapper .ginput_container input[type=tel],
+.gform_wrapper .ginput_container input[type=text],
+.gform_wrapper .ginput_container input[type=url],
+.gform_wrapper .ginput_container input.large,
+.gform_wrapper .ginput_container_name > input[type=email],
+.gform_wrapper .ginput_container_name input[type=number],
+.gform_wrapper .ginput_container_name input[type=password],
+.gform_wrapper .ginput_container_name input[type=tel],
+.gform_wrapper .ginput_container_name input[type=text],
+.gform_wrapper .ginput_container_name input[type=url],
+.gform_wrapper .ginput_container_name input.large {
+  width: 100% !important;
+  margin-bottom: 0 !important; }
+
+.gform_wrapper .ginput_container {
+  max-width: 100% !important;
+  margin: 0 !important; }
+  .gform_wrapper .ginput_container > span {
+    padding-top: 0 !important; }
+
+.gform_wrapper .ginput_container_name > span {
+  max-width: 100%;
+  width: 100% !important;
+  margin-bottom: 0;
+  padding-right: 0;
+  display: block;
+  padding: 0 !important;
+  min-height: auto !important; }
+  .gform_wrapper .ginput_container_name > span.name_first {
+    margin: 0 0 1rem; }
+
+.gform_wrapper .gform_footer {
+  padding: 0 0 .625em !important;
+  margin: 0 !important;
+  clear: both; }
 
 #eNewsletter .gform_heading,
 #eNewsletter .gform_title,
@@ -4525,34 +4585,12 @@ PLUGIN STYLES
 #eNewsletter .gform_fields {
   margin: 0; }
 
-#eNewsletter .gform_wrapper .hidden_label input.large,
-#eNewsletter .gform_wrapper .hidden_label select.large,
-#eNewsletter .gform_wrapper .top_label input.large,
-#eNewsletter .gform_wrapper .top_label select.large {
-  margin-top: -0.5rem; }
-
 #eNewsletter .gform_wrapper li.gfield.gfield_error {
   background-color: none !important;
   border: none !important; }
 
-/*** Gravity forms error handling***/
-/* Make the error stand out */
-.gfield_error input {
-  background-color: rgba(198, 15, 19, 0.1);
-  border-color: #c60f13;
-  /* Prepend the error message to the missing but required field */ }
-
-.gfield_error::after {
-  content: "Invalid entry" !important;
-  display: block;
-  padding: 0.5rem !important;
-  margin-top: -17px !important;
-  margin-bottom: 12px !important;
-  background: #c60f13;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  width: 97.5%; }
+#eNewsletter .gform_wrapper ul > li.gfield {
+  width: 100%; }
 
 /* Hide the error message since we're displaying it above */
 .validation_error, .validation_message {
