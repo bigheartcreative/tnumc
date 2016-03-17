@@ -630,7 +630,7 @@ POSTS & CONTENT STYLES
 	
 	@include breakpoint(large) {
 		background-size: 100% auto;
-		margin: -14rem 0 0;
+		margin: -16rem 0 0;
 		padding: 16rem 0 2rem;
 		min-height: 40rem;
 	}
@@ -1092,7 +1092,7 @@ FOOTER STYLES
 		text-transform: none;
 	}
 
-	div {
+	> div {
 		padding-top: $global-margin;
 	}
 }

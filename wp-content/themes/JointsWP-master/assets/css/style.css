@@ -4201,7 +4201,7 @@ POSTS & CONTENT STYLES
   @media screen and (min-width: 64em) {
     .responsive-background {
       background-size: 100% auto;
-      margin: -14rem 0 0;
+      margin: -16rem 0 0;
       padding: 16rem 0 2rem;
       min-height: 40rem; } }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -4427,7 +4427,7 @@ FOOTER STYLES
       margin-right: 1rem; }
   .footer span {
     text-transform: none; }
-  .footer div {
+  .footer > div {
     padding-top: 1rem; }
 
 .article-footer {

@@ -21,18 +21,6 @@
 				</svg>
 			</a>
 			<div class="language float-right" id="google_translate_element"></div>
-			
-			<!--
-			<a class="language float-right" data-toggle="lang-dropdown">English</a>
-			<ul class="dropdown-pane" id="lang-dropdown" data-dropdown data-hover="true">
-				<li><a><?php _e( 'English', 'jointswp' ); ?></a></li>
-				<li><a><?php _e( 'Korean', 'jointswp' ); ?></a></li>
-				<li><a><?php _e( 'French', 'jointswp' ); ?></a></li>
-				<li><a><?php _e( 'Portuguese', 'jointswp' ); ?></a></li>
-				<li><a><?php _e( 'Spanish', 'jointswp' ); ?></a></li>
-			</ul>
-			-->
-			
 			<a class="first float-right"><?php _e( 'Staff', 'jointswp' ); ?></a>
 			<a class="float-right"><?php _e( 'Districts', 'jointswp' ); ?></a>
 			<a class="float-right"><?php _e( 'Bishop', 'jointswp' ); ?></a>
@@ -50,9 +38,9 @@
 			</a>
 		</div>
 		<div class="medium-8 columns text-right button-block show-for-medium">
-			<a class="light-blue button" href="#"><?php _e( 'About Us', 'jointswp' ); ?></a>
-			<a class="light-blue button" href="#"><?php _e( 'Communications', 'jointswp' ); ?></a>
-			<a class="light-blue button" href="#"><?php _e( 'Forms', 'jointswp' ); ?></a>
+			<?php if ( is_active_sidebar( 'header_feature' ) ) : ?>
+				<?php dynamic_sidebar( 'header_feature' ); ?>
+			<?php endif; ?>
 		</div>
 	</div>	
 </div>
