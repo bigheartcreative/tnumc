@@ -3923,6 +3923,18 @@ HEADER STYLES
   #wpadminbar {
     position: fixed !important; } }
 
+.topnav-links-menu {
+  list-style: none;
+  margin: 0;
+  float: right;
+  line-height: 1.6rem; }
+  .topnav-links-menu > li {
+    float: right; }
+    .topnav-links-menu > li > .sub-menu {
+      display: none !important; }
+    .topnav-links-menu > li:first-child {
+      margin: 0 1rem 0 0; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -3939,7 +3951,7 @@ NAVIGATION STYLES
     .goog-te-gadget-simple a.goog-te-menu-value > span {
       color: #fefefe !important; }
   .goog-te-gadget-simple span {
-    vertical-align: auto !important; }
+    vertical-align: initial !important; }
 
 .top-bar .title-area {
   z-index: 1; }
@@ -3948,9 +3960,6 @@ NAVIGATION STYLES
   line-height: 1;
   font-size: 80%;
   padding: 0.5rem; }
-
-.top-bar a.first {
-  margin: 0 1rem 0 0; }
 
 .top-bar .language {
   line-height: 2; }

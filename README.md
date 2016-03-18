@@ -4,6 +4,7 @@ Custom theme developed for tnumc, built on zurb foundation 6.1.2.
 External Plugins recommended with build:
 - gravityforms
 - gravityformsmailchimp
+- gravity-forms-no-captcha-recaptcha
 - LayerSlider (premium)
 - TheEventsCalendar
 - wordfence

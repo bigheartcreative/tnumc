@@ -21,10 +21,9 @@
 				</svg>
 			</a>
 			<div class="language float-right" id="google_translate_element"></div>
-			<a class="first float-right"><?php _e( 'Staff', 'jointswp' ); ?></a>
-			<a class="float-right"><?php _e( 'Districts', 'jointswp' ); ?></a>
-			<a class="float-right"><?php _e( 'Bishop', 'jointswp' ); ?></a>
-			<a class="float-right"><?php _e( 'Churches', 'jointswp' ); ?></a>
+			
+			<?php joints_topnav_links(); ?>
+
 		</div>
 	</div>
 </div>

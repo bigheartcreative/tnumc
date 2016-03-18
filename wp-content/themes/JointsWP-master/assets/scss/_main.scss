@@ -233,6 +233,25 @@ HEADER STYLES
 	}
 }
 
+.topnav-links-menu {
+	list-style: none;
+	margin: 0;
+	float: right;
+	line-height: 1.6rem;
+	
+	> li {
+		float: right;
+		
+		> .sub-menu {
+			display: none !important;
+		}
+		
+		&:first-child {
+			margin:0 1rem 0 0;
+		}
+	}
+}
+
     
 /*********************
 NAVIGATION STYLES
@@ -259,7 +278,7 @@ NAVIGATION STYLES
 	}
 	
 	span {
-		vertical-align: auto !important;
+		vertical-align: initial !important;
 		
 	}
 }
@@ -275,10 +294,6 @@ NAVIGATION STYLES
 		line-height: 1;
 		font-size: $small-font-size;
 		padding: 0.5rem;
-	}
-
-	a.first {
-		margin:0 1rem 0 0;
 	}
 	
 	.language {
