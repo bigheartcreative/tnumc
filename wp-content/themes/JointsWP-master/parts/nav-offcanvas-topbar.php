@@ -29,7 +29,7 @@
 </div>
 <div class="logo-bar show-for-medium <?php echo secondary_page_setting('opacity'); ?>" id="logo-bar-menu">
 	<div class="logo-row row align-middle">
-		<div class="medium-4 columns">
+		<div class="medium-3 columns">
 			<a class="logo" href="<?php echo home_url(); ?>">
 				<svg class="logo-icon Icon">
 					<use xlink:href="#icon-logo"></use>
@@ -44,7 +44,7 @@
 	</div>	
 </div>
 <div class="logo-bar row show-for-small-only <?php echo secondary_page_setting('opacity'); ?>" id="logo-bar-menu-mobile">
-	<div class="small-7 columns">
+	<div class="small-5 columns">
 		<a class="logo" href="<?php echo home_url(); ?>">
 			<svg class="logo-icon Icon">
 				<use xlink:href="#icon-logo"></use>

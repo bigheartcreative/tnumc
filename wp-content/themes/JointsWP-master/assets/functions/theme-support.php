@@ -65,7 +65,7 @@ function secondary_page_setting($arg) {
 	$dark = 'dark';
 	
 	if ( $arg = 'opacity' ) {
-		if ( ( is_page_template('template-secondary.php') && has_post_thumbnail($id) ) || is_front_page() ) {
+		if ( ( is_page() && has_post_thumbnail($id) ) || is_front_page() ) {
 			return $light;
 		} else {
 			return $dark;

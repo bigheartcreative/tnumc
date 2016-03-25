@@ -3994,9 +3994,27 @@ NAVIGATION STYLES
 
 .logo-bar .logo-icon {
   display: block;
-  max-height: 3.9rem;
-  max-width: 100%;
-  color: #0a0a0a; }
+  color: #0a0a0a;
+  float: left; }
+  @media screen and (min-width: 64em) {
+    .logo-bar .logo-icon {
+      max-height: 6rem; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .logo-bar .logo-icon {
+      max-height: 6rem; } }
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+    .logo-bar .logo-icon {
+      max-height: 4rem; } }
+  .logo-bar .logo-icon use {
+    float: left; }
+
+@media screen and (min-width: 64em) {
+  .logo-bar .logo {
+    padding: 0; } }
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .logo-bar .logo {
+    padding: 0; } }
 
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
   .logo-bar .logo {
@@ -4095,7 +4113,7 @@ POSTS & CONTENT STYLES
   padding-bottom: 2rem; }
 
 #crumbs {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   font-size: .75em; }
 
 .byline {

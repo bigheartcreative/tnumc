@@ -40,7 +40,7 @@
 		<!--Super fast-loading SVG's -->
 		<div style="display:none">
 			<?php get_template_part( 'svg/inline', 'search.svg' ); ?>
-			<?php get_template_part( 'svg/inline', 'logo.svg' ); ?>
+			<?php get_template_part( 'svg/inline', 'logo-tnumc.svg' ); ?>
 			<?php get_template_part( 'svg/inline', 'menu.svg' ); ?>
 		</div>
 

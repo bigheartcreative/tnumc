@@ -16,6 +16,7 @@ GENERAL STYLES
 	overflow: visible !important;	
 }
 
+
 img {
 	.homepage-feature-posts & {
 		display: block;
@@ -338,12 +339,35 @@ NAVIGATION STYLES
 .logo-bar {
 	.logo-icon {
 		display: block;
-		max-height: 3.9rem;
-		max-width: 100%;
 		color: $black;
+		float: left;
+
+		@include breakpoint(large) {
+			max-height: 6rem;
+		}
+		@include breakpoint(medium only) {
+			max-height: 6rem;
+		}
+	
+		@include breakpoint(small only) {
+			max-height: 4rem;
+		}
+		
+		
+		use {
+			float: left;
+		}
 	}
 	
 	.logo {
+	
+		@include breakpoint(large) {
+			padding:0;
+		}
+		@include breakpoint(medium only) {
+			padding:0;
+		}
+	
 		@include breakpoint(small only) {
 			padding:0;
 		}
@@ -503,7 +527,7 @@ POSTS & CONTENT STYLES
 
 // Breadcrumbs
 #crumbs {
-	margin-bottom: 0;
+	margin-bottom: 1rem;
 	font-size: .75em;
 }
 
