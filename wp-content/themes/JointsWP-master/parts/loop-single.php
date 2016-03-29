@@ -23,8 +23,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		<!-- This will be for both categories and tags -->
 		<div class="medium-9 columns">
 			<p class="tags">
-				<span class="tags-title"><?php _e( 'CATEGORIES: ', 'jointswp' ); ?></span><?php the_category(','); ?>&nbsp;&nbsp;
-				<?php the_tags('<span class="tags-title">' . __( 'TAGS:', 'jointswp' ) . '</span> ', ', ', ''); ?>
+				<span class="tags-title"><?php _e( 'CATEGORIES: ', 'jointswp' ); ?></span><?php the_category(', '); ?>
 			</p>
 		</div>
 		<div class="medium-3 columns">

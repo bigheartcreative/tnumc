@@ -3791,7 +3791,7 @@ GENERAL STYLES
 
 .entry-content img {
   display: block;
-  border: 1px solid #cacaca; }
+  border: none; }
 
 .gray {
   color: #8a8a8a; }
