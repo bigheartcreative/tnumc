@@ -2735,7 +2735,8 @@ select {
   min-width: 285px;
   z-index: 1;
   background: #fefefe;
-  border: none; }
+  border: 1px solid #e6e6e6;
+  margin-top: -1px; }
   .dropdown.menu .submenu > li {
     width: 100%; }
   .dropdown.menu .submenu > li > a {
@@ -3992,6 +3993,19 @@ NAVIGATION STYLES
       padding: 0;
       margin: 0; } }
 
+.dropdown.menu > li:last-child .submenu.first-sub {
+  left: auto;
+  right: -1px; }
+
+.dropdown.menu .submenu {
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 0 0 2px 2px rgba(10, 10, 10, 0.1);
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ }
+  .dropdown.menu .submenu.first-sub {
+    border-top: none;
+    z-index: -9; }
+
 .logo-bar .logo-icon {
   display: block;
   color: #0a0a0a;
@@ -4039,18 +4053,29 @@ NAVIGATION STYLES
   .off-canvas-list ul .dropdown {
     margin-left: 20px; }
 
+/*********************
+OFFCANVAS MOBILE STYLES
+*********************/
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
-  .menu.vertical > li > a {
-    line-height: 3rem; }
-  .menu.vertical:not(.nested) > li > a {
-    border-bottom: 1px solid #cacaca;
-    padding-left: .8rem; }
-  .menu.vertical.nested {
-    margin-left: 0; }
-    .menu.vertical.nested > li.is-submenu-item {
-      background-color: #efefef; }
-      .menu.vertical.nested > li.is-submenu-item > a {
-        padding-left: 1.5rem; } }
+  .off-canvas {
+    background: #0a0a0a; }
+    .off-canvas .menu.vertical.nested {
+      margin-left: 0; }
+      .off-canvas .menu.vertical.nested a {
+        background-color: #0a0a0a;
+        color: #fefefe; }
+      .off-canvas .menu.vertical.nested .nested {
+        margin-left: 1rem; }
+        .off-canvas .menu.vertical.nested .nested a {
+          font-size: 60%; }
+    .off-canvas .menu.vertical > li > a {
+      background-color: #8a8a8a;
+      color: #cacaca; }
+    .off-canvas .menu.vertical > li a {
+      line-height: 1rem;
+      padding: .4rem .3rem .3rem 1rem;
+      font-size: 80%;
+      font-weight: 700; } }
 
 /*********************
 POSTS & CONTENT STYLES

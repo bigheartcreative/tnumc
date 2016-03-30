@@ -335,6 +335,32 @@ NAVIGATION STYLES
 	
 }
 
+.dropdown {
+	&.menu {
+
+		> li:last-child {
+		
+			.submenu {
+			
+				&.first-sub {
+					left: auto;
+					right: -1px;
+				}
+			}
+		}
+	
+		.submenu {
+		
+			@include object-shadow;
+			
+			&.first-sub {
+				border-top: none;
+				z-index: -9;
+			}
+		}
+	}
+}
+
 
 .logo-bar {
 	.logo-icon {
@@ -404,39 +430,51 @@ NAVIGATION STYLES
 	}
 }
 
-.menu.vertical {
-	
+
+/*********************
+OFFCANVAS MOBILE STYLES
+*********************/
+.off-canvas {
+
 	@include breakpoint(small only) {
 	
-		> li > a {
-			line-height: 3rem;			
-		}
-
-		&:not(.nested) {
+		background: $black;
 		
+		.menu.vertical {
+		
+			&.nested {
+				margin-left: 0;
+				
+				a {
+					background-color: $black;
+					color: $white;
+				}
+				
+				.nested {  //2nd nesting level //
+					margin-left: 1rem;
+					
+					a {
+						font-size: ($small-font-size - 20%);
+					}
+				}
+				
+			}
+			
 			> li {
 			
 				> a {
-					border-bottom: 1px solid $medium-gray;
-					padding-left: .8rem;
-				}
-			}
-		}
-		
-		&.nested {
-		
-		margin-left:0;
-		
-			> li {
+					background-color: $dark-gray;
+					color: $medium-gray;
 					
-				&.is-submenu-item {
-				
-				background-color: #efefef;
-				
-					> a {
-						padding-left: 1.5rem;
-					}
 				}
+				
+				a {
+					line-height: 1rem;
+					padding: .4rem .3rem .3rem 1rem;
+					font-size: $small-font-size;
+					font-weight: $global-weight-bold;
+				}
+				
 			}
 		}
 	}
