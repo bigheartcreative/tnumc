@@ -4587,14 +4587,13 @@ OFFCANVAS MOBILE STYLES
       .off-canvas .menu.vertical.nested .nested {
         margin-left: 1rem; }
         .off-canvas .menu.vertical.nested .nested a {
-          font-size: 60%; }
+          font-size: 80%; }
     .off-canvas .menu.vertical > li > a {
       background-color: #8a8a8a;
       color: #cacaca; }
     .off-canvas .menu.vertical > li a {
       line-height: 1rem;
       padding: .4rem .3rem .3rem 1rem;
-      font-size: 80%;
       font-weight: 700; } }
 
 /*********************

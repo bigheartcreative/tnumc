@@ -34,17 +34,9 @@ $button-color: #fff !default;
 /// @type List
 $button-color-alt: #000 !default;
 
-/// Font family for buttons.
-/// @type String | List
-$button-font-family: 'Open Sans', Arial, Helvetica !default;
-
 /// Border radius for buttons, defaulted to global-radius.
 /// @type Number
-$button-radius: none !default;
-
-/// Box shadow under buttons
-/// @type Shadow
-$button-shadow: none !default;
+$button-radius: $global-radius !default;
 
 /// Sizes for buttons.
 /// @type Map
@@ -79,9 +71,6 @@ $button-opacity-disabled: 0.25 !default;
   padding: $button-padding;
   margin: $button-margin;
   font-size: map-get($button-sizes, default);
-  font-family: $button-font-family;
-  box-shadow: $button-shadow;
-  text-transform: uppercase;
 }
 
 /// Expands a button to make it full-width.
@@ -110,18 +99,11 @@ $button-opacity-disabled: 0.25 !default;
   $color: $button-color
 ) {
   @if $color == auto {
-    $color: isitlight($background);
+    $color: foreground($background);
   }
 
   @if $background-hover == auto {
     $background-hover: scale-color($background, $lightness: -20%);
-  }
-
-  @if lightness($background) >= 70% {
-    $color: $button-color-alt;
-  }
-  @else {
-    $color: $button-color;
   }
 
   background-color: $background;
