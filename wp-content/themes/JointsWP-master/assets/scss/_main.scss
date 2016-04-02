@@ -1182,10 +1182,18 @@ FOOTER STYLES
 	}
 }
 
+#contactInfo {
+	padding-bottom: 2rem;
+}
+
 .article-footer {
 	padding:.5rem 0;
 	border-top:1px solid $light-gray;
 	border-bottom: 1px solid $light-gray;
+}
+
+.copyright {
+	padding:1rem 0;
 }
 
 /*********************
