@@ -26,8 +26,6 @@ $menu-icon-spacing: 0.25rem !default;
 /// @type Number
 $menu-expand-max: 6 !default;
 
-$hover-border-top-width: 0.3rem;
-
 /// Creates the base styles for a Menu.
 @mixin menu-base {
   margin: $menu-margin;
@@ -41,8 +39,9 @@ $hover-border-top-width: 0.3rem;
   }
 
   // Reset line height to make the height of the overall item easier to calculate
-  > li:not(.menu-text) > a {
+  > li > a {
     display: block;
+    padding: $menu-item-padding;
     line-height: 1;
   }
 
@@ -59,17 +58,6 @@ $hover-border-top-width: 0.3rem;
   display: table;
   table-layout: fixed;
   width: 100%;
-}
-
-/// Sets top level hover style
-@mixin top-level-menu-hover {
-	background-color: $white;
-	border-top: $hover-border-top-width solid $red;
-	border-right: .1rem solid $white;
-	
-	a {
-		color: $primary-color;
-	}
 }
 
 /// Sets the direction of a Menu.
@@ -90,11 +78,16 @@ $hover-border-top-width: 0.3rem;
   }
 }
 
-/// Creates a simple Menu with hover state.
+/// Creates a simple Menu, which has no padding or hover state.
 @mixin menu-simple {
+  li {
+    line-height: 1;
+    display: inline-block;
+    margin-#{$global-right}: get-side($menu-item-padding, $global-right);
+  }
+
   a {
     padding: 0;
-    margin-#{$global-right}: get-side($menu-item-padding, $global-right);
   }
 }
 
@@ -156,7 +149,7 @@ $hover-border-top-width: 0.3rem;
   .menu {
     @include menu-base;
     @include menu-icons;
-    
+
     // Orientation
     @include menu-direction(horizontal);
 
@@ -182,7 +175,7 @@ $hover-border-top-width: 0.3rem;
     &.simple {
       @include menu-simple;
     }
-        
+
     // Align right
     &.align-#{$global-right} {
       > li {
@@ -199,7 +192,7 @@ $hover-border-top-width: 0.3rem;
       }
     }
 
-    // Vertical icons 
+    // Vertical icons
     &.icon-top {
       @include menu-icons(top, $base: false);
     }
@@ -207,41 +200,11 @@ $hover-border-top-width: 0.3rem;
     // Nesting
     &.nested {
       @include menu-nested;
-    }    
+    }
   }
 
   .menu-text {
     @include menu-text;
-  }
-  
-  .medium-horizontal {
-    // Normal
-    > li {
-	    border-top: $hover-border-top-width solid transparent;
-	    border-right: .1rem solid #579ada;
-	    width: 20%;
-    }
-    
-    > li.current-menu-item {
-	    border-right: .1rem solid $white;
-    }
-    
-    > li:last-child {
-	    border-right: none;
-    }
-    
-    > li > a {
-	    text-align: center;
-	    color: $white;
-	    text-transform: uppercase;
-	    font-weight: $global-weight-bold;
-	    padding: 2.0rem 2.0rem;
-    }
-    // Hovers
-    > li:hover, &> .current-menu-item {
-	  @include top-level-menu-hover;
-    }
-
   }
 
   // Prevent FOUC when using the Responsive Menu plugin
