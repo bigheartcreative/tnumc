@@ -14,7 +14,7 @@
 </div>
 <div class="top-bar show-for-medium" id="top-bar-menu">
 	<div class="row">
-		<div class="top-bar-right float-right">
+		<div class="column top-bar-right">
 			<a class="float-right search-trigger" data-toggle="search-header">
 				<svg class="search-icon Icon">
 					<use xlink:href="#icon-search"></use>
@@ -36,7 +36,7 @@
 				</svg>
 			</a>
 		</div>
-		<div class="medium-8 columns text-right button-block show-for-medium">
+		<div class="medium-9 columns text-right button-block show-for-medium">
 			<?php if ( is_active_sidebar( 'header_feature' ) ) : ?>
 				<?php dynamic_sidebar( 'header_feature' ); ?>
 			<?php endif; ?>
@@ -51,7 +51,7 @@
 			</svg>
 		</a>
 	</div>
-	<div class="small-5 columns">
+	<div class="small-5 small-offset-2 columns">
 		<div class="mobile-control-box">
 			<a class="float-left search-trigger" data-toggle="search-header">
 				<svg class="search-icon Icon">

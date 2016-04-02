@@ -430,6 +430,15 @@ NAVIGATION STYLES
 	}
 }
 
+.nav-bar {
+
+	.top-bar-left {
+		@include breakpoint(medium) {
+			margin:0;
+		}
+	}
+}
+
 
 /*********************
 OFFCANVAS MOBILE STYLES
