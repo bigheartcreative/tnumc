@@ -3952,8 +3952,8 @@ body {
 .off-canvas-wrapper-inner {
   position: relative;
   width: 100%;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease; }
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease; }
   .off-canvas-wrapper-inner::before, .off-canvas-wrapper-inner::after {
     content: ' ';
     display: table;
@@ -3970,8 +3970,8 @@ body {
 .off-canvas-content {
   min-height: 100%;
   background: #fefefe;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
@@ -3987,11 +3987,11 @@ body {
   height: 100%;
   background: rgba(254, 254, 254, 0.25);
   cursor: pointer;
-  transition: background 0.5s ease; }
+  transition: background 0.8s ease; }
 
 .off-canvas {
   position: absolute;
-  background: #e6e6e6;
+  background: #0a0a0a;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
@@ -4978,12 +4978,23 @@ HEADER STYLES
     .mobile-control-box a.search-trigger {
       height: 3rem;
       width: 3rem;
-      padding: 1rem; } }
+      padding: 1rem;
+      position: relative;
+      display: inline-block; } }
   @media screen and (max-width: 39.9375em) {
     .mobile-control-box a.menu-trigger {
       height: 3rem;
       width: 3rem;
-      padding: .6rem; } }
+      padding: .6rem;
+      position: relative;
+      display: inline-block; } }
+  .mobile-control-box a.search-trigger:after, .mobile-control-box a.menu-trigger:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
 
 .search-bar.expanded {
   display: block; }
@@ -5022,16 +5033,15 @@ NAVIGATION STYLES
   .goog-te-gadget-simple span {
     vertical-align: initial !important; }
 
-.top-bar .title-area {
-  z-index: 1; }
-
-.top-bar a {
-  line-height: 1;
-  font-size: 80%;
-  padding: 0.5rem; }
-
-.top-bar .language {
-  line-height: 2; }
+@media screen and (min-width: 40em) {
+  .top-bar .title-area {
+    z-index: 1; }
+  .top-bar a {
+    line-height: 1;
+    font-size: 80%;
+    padding: 0.5rem; }
+  .top-bar .language {
+    line-height: 2; } }
 
 .search-icon {
   display: block;
@@ -5137,7 +5147,7 @@ OFFCANVAS MOBILE STYLES
         background-color: #0a0a0a;
         color: #fefefe; }
       .off-canvas .menu.vertical.nested .nested {
-        margin-left: 1rem; }
+        padding-left: 1rem; }
         .off-canvas .menu.vertical.nested .nested a {
           font-size: 80%; }
     .off-canvas .menu.vertical > li > a {

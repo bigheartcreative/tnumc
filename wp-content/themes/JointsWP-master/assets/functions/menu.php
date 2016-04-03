@@ -3,7 +3,8 @@
 register_nav_menus(
 	array(
 		'main-nav' => __( 'The Main Menu', 'jointswp' ),   // Main nav in header
-		'topnav-links' => __( 'Top Nav Links', 'jointswp' ) // Secondary nav in footer
+		'topnav-links' => __( 'Top Nav Links', 'jointswp' ), // Secondary nav in footer
+		'mobile-nav' => __( 'Mobile Menu', 'jointswp' ) // Secondary nav in footer
 	)
 );
 

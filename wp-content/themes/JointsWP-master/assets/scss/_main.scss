@@ -210,6 +210,8 @@ HEADER STYLES
 				height: 3rem;
 				width: 3rem;
 				padding: 1rem;
+				position: relative;
+				display: inline-block;
 			}
 		}
 	
@@ -218,7 +220,19 @@ HEADER STYLES
 				height: 3rem;
 				width: 3rem;
 				padding:.6rem;
+				position: relative;
+				display: inline-block;
 			}	
+		}
+		
+		&.search-trigger:after,
+		&.menu-trigger:after {
+			content: ""; 
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left:0;
 		}
 	}
 }
@@ -287,18 +301,22 @@ NAVIGATION STYLES
 
 
 .top-bar {
-	.title-area {
-		z-index: 1;
-	}
-	
-	a {
-		line-height: 1;
-		font-size: $small-font-size;
-		padding: 0.5rem;
-	}
-	
-	.language {
-		line-height: 2;
+
+	@include breakpoint(medium) {
+
+		.title-area {
+			z-index: 1;
+		}
+		
+		a {
+			line-height: 1;
+			font-size: $small-font-size;
+			padding: 0.5rem;
+		}
+		
+		.language {
+			line-height: 2;
+		}
 	}
 }
 
@@ -460,7 +478,7 @@ OFFCANVAS MOBILE STYLES
 				}
 				
 				.nested {  //2nd nesting level //
-					margin-left: 1rem;
+					padding-left: 1rem;
 					
 					a {
 						font-size: $small-font-size;
@@ -1291,6 +1309,7 @@ PLUGIN STYLES
 	}
 
 	input, select, textarea {
+		
 		&.large, &.small {
 			width: 100% !important;
 		}
