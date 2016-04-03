@@ -37,7 +37,7 @@
 					
 				?>
 					<div class="row">
-						<div class="medium-12 columns pad-bottom">
+						<div class="small-12 medium-12 columns pad-bottom">
 							<?php echo $col_fw; ?>
 						</div>
 					</div>
@@ -53,10 +53,10 @@
 					
 				?>
 					<div class="row">
-						<div class="medium-6 columns pad-bottom">
+						<div class="small-12 medium-6 columns pad-bottom">
 							<?php echo $col_1; ?>
 						</div>
-						<div class="medium-6 columns pad-bottom">
+						<div class="small-12 medium-6 columns pad-bottom">
 							<?php echo $col_2; ?>
 						</div>
 					</div>

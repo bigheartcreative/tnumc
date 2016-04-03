@@ -3952,8 +3952,8 @@ body {
 .off-canvas-wrapper-inner {
   position: relative;
   width: 100%;
-  transition: -webkit-transform 0.8s ease;
-  transition: transform 0.8s ease; }
+  transition: -webkit-transform 0.5s none;
+  transition: transform 0.5s none; }
   .off-canvas-wrapper-inner::before, .off-canvas-wrapper-inner::after {
     content: ' ';
     display: table;
@@ -3970,8 +3970,8 @@ body {
 .off-canvas-content {
   min-height: 100%;
   background: #fefefe;
-  transition: -webkit-transform 0.8s ease;
-  transition: transform 0.8s ease;
+  transition: -webkit-transform 0.5s none;
+  transition: transform 0.5s none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
@@ -3987,7 +3987,7 @@ body {
   height: 100%;
   background: rgba(254, 254, 254, 0.25);
   cursor: pointer;
-  transition: background 0.8s ease; }
+  transition: background 0.5s none; }
 
 .off-canvas {
   position: absolute;

@@ -138,7 +138,7 @@ function home_feature_list() {
 			if ( has_post_thumbnail() ) {
 				echo get_the_post_thumbnail( $feature_posts->ID, 'thumbnail' );
 			} else {
-				echo '<img src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" />';
+				echo '<img src="' . get_template_directory_uri() . '/assets/images/placeholder.jpg' . '" />';
 			}
 			echo '</a>';
 			
