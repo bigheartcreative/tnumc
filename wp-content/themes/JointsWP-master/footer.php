@@ -23,11 +23,18 @@
 								<?php gravity_form(1, true, true, false, '', false, 100); ?>
 		    				</div>
 		    				<div class="small-12 medium-4 large-3 large-offset-1 columns" id="connect">
+								<?php if ( is_active_sidebar( 'footer_right' ) ) : ?>
+									<?php dynamic_sidebar( 'footer_right' ); ?>
+								<?php endif; ?>
+		    				
+<?php /*		    				
 								<h5><?php _e( 'Connect With Us', 'jointswp' ); ?></h5>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="Facebook"></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="Twitter"></a>
 								<a href="#"><img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="YouTube"></a>
+*/ ?>
 		    				</div>
+		    				
 							<div class="large-12 medium-12 columns">
 								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 							</div>

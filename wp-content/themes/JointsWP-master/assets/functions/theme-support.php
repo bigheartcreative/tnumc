@@ -186,3 +186,14 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+
+//Custom RoyalSlider skin
+add_filter('new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2);
+function new_royalslider_add_custom_skin($skins) {
+      $skins['myCustomSkin'] = array(
+           'label' => 'TNUMC Transparent',
+           'path' => get_stylesheet_directory_uri() . '/assets/css/royal_slider/royal_slider_transparent.css'  // get_stylesheet_directory_uri returns path to your theme folder
+      );
+      return $skins;
+}
+

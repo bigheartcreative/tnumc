@@ -11,6 +11,12 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 	
 	<div id="feature" class="responsive-background" style="background-image:url(<?php background_featured_image(); ?>)">
 		<div class="slider-container">
+			
+			<?php echo get_new_royalslider(1); ?>
+			
+			
+			
+<? /* Layerslider			
 			<div class="column row">
 				
 				<?php if ( is_plugin_active( 'LayerSlider/layerslider.php' ) ) {		
@@ -18,6 +24,10 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 				} ?>
 
 			</div>
+*/ ?>			
+			
+			
+			
 		</div>
 	</div> <!-- end #feature -->
 	

@@ -5364,7 +5364,7 @@ POSTS & CONTENT STYLES
     @media screen and (max-width: 39.9375em) {
       .responsive-background .slider-container {
         background-size: cover;
-        padding: 8rem 0 1rem; } }
+        padding: 1rem 0; } }
 
 .ls-minimal .ls-bottom-nav-wrapper {
   text-align: right !important;
