@@ -19,7 +19,7 @@ Mixins & Constants.
 /*********************
 TOOLS
 *********************/
-@import url("//fonts.googleapis.com/css?family=Open+Sans:600,700,800,400,400italic,600italic,700italic,800italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600,700,800,400,400italic,600italic,700italic,800italic");
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;

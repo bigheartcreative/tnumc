@@ -3,6 +3,7 @@ wp-admin/
 wp-includes/
 wp-config.php
 **/.DS_Store
+**/robots.txt
 */wp-content/blogs.dir/
 */wp-content/upgrade/
 */wp-content/backup-db/
