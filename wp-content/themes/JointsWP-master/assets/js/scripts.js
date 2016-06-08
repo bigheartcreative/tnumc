@@ -18,5 +18,5 @@ jQuery(document).ready(function() {
 	jQuery('.archive-grid .columns').last().addClass( 'end' );
 	
 	// Adds Flex Video to YouTube and Vimeo Embeds
-	jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').wrap("<div class='flex-video'/>");
+	jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').wrap("<div class='widescreen flex-video'/>");
 });
