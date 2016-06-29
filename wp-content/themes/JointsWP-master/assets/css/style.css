@@ -5410,10 +5410,10 @@ IMAGE GALLERY STYLES
     position: relative;
     float: left;
     width: 33%;
-    text-align: center; }
+    text-align: center;
+    margin: 0 0 1rem; }
   .gallery .gallery-caption {
-    color: #888;
-    margin: 0 0 2rem; }
+    color: #888; }
   .gallery dl {
     margin: 0; }
   .gallery dt {
